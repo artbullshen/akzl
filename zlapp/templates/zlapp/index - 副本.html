@@ -1,0 +1,385 @@
+{% extends "zlapp/base1.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+      <ul class="nav nav-pills flex-column">
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:zhangling1' %}">岭上岁月</a>
+        </li>
+
+         <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:sd3j1' %}">水电三局</a>
+         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:respect1' %}">致敬时代</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school' %}">子弟学校</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:other' %}">其它专题</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:features' %}">三餐四季</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:bond' %}">天南地北</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#topic_link">网站声明</a>
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      <h2></h2>
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">
+      <a href="{% url 'zlapp:news' %}">张岭最新动态</a>
+
+      </h5>
+  </div>
+  <div class="card-body">
+
+
+    {% for new in news %}
+      <li>{{ new.text }}   </li>
+      <p>{{ new.date_added|date:'Y年m月d日' }}</p>
+      <p>{{ new.cont|slice:"30" }}
+              {{ "..."}}
+      </p>
+
+    {% endfor %}
+
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+
+
+
+{% endblock cemian2 %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <h4 class="text-center">岭上岁月：三局一代人的归宿与记忆</h4>
+   <div class="card">
+    <div class="card-header">
+
+      <h5 class="chinese-text">陕西安康张岭，是水电三局建设安康水电站时，
+        同期建设的临时生活基地。
+      </h5>
+      <h5 class="chinese-text">
+        张岭，位于陕西省安康市汉滨区汉江大桥的北岸。1976年以前，这里还是一片荒芜之地。
+        1977年安康水电站进行开工准备工作，上万人的施工队伍及家属，便临时安置在与安康县城一桥之隔，
+        这个叫张岭的山包包上，谁曾想，这份“临时”最终酿成了“永久”。
+      </h5>
+
+    </div>
+    <div class="card-body">
+
+    <p class="chinese-text">
+    在新中国庞大的工业建设浪潮中，张岭这样的社区或许只是微不足道的注脚。
+    它们没有青海金银滩221厂哪样的惊天动地，艰苦卓绝；
+    也没有青海冷湖石油小镇的规模宏大、苍凉壮观。
+    它们未曾载入正史，鲜有媒体聚焦，唯有那些在此奉献青春、出生成长的人们，
+    还有山水之间的，那道宏伟的拦河大坝，
+    始终铭记着它的存在。
+    </p>
+
+
+    <p class="chinese-text">
+    这一切，都缘于矗立在汉江陕西段、距安康城区上游18公里火石岩的汉江开发治理骨干工程--
+    安康水电站。
+    </p>
+
+    <h6 class="text-center">
+      <img src="{% static 'images/zlapp/安康水电站.png' %}" alt="" width="713" height="337">
+      <p>安康水电站，最大坝高128米，坝顶长541.5米，总装机852.5MW。<br>
+      1978年3月开工，1990年12月首台机组发电，2000年工程全部竣工。
+      </p>
+        </h6>
+
+
+    <p class="chinese-text">
+    1974年，安康水电站坝址勘测小分队怀揣经纬仪踏入这片荒岭，彼时他们或许未曾料想，
+    脚下的土地不仅将贯通西部能源大动脉，更会崛起一座承载万千家庭的基建部落——张岭。
+    </p>
+
+    
+
+
+    <p class="chinese-text">
+    1978年3月安康水电站正式开工建设，火石岩施工现场称为前方，
+    张岭做为职工家属的临时庇护所，称为后方。
+    谁曾想，这份“临时”最终酿成了“永久”。
+    </p>
+
+
+    </div>
+    <div class="card-footer">
+    <h5 class="text-right">
+    <a href="{% url 'zlapp:zhangling1' %}#zl1">更多更详细内容请进入
+    </a>
+    </h5>
+    </div>
+  </div>
+
+  <p></p>
+  <h4 class="text-center">水电三局：源于黄河的水电建设单位</h4>
+
+  <div class="card">
+    <div class="card-header">
+
+        <h5 class="chinese-text">中国水利水电第三工程局有限公司（简称“中国水电三局”）组建于上世纪50年代，
+          现为中国电力建设集团旗下中国水利水电建设股份公司的全资子公司，是集科研、设计、开发、施工、制造安装、
+        监理和咨询为一体的国家大型骨干企业。</h5>
+
+    </div>
+
+    <div class="card-body">
+    <p class="chinese-text">
+      水电三局的发展历史，可以追溯到1955年三门峡水利枢纽工程和伊河陆浑水库工程的建设，
+      因为工程局有相当数量的老同志都参加过当年的艰苦创业。之后由刘家峡、青铜峡等电站工地，
+      转战到了陕西汉江之上，先后承建了石泉水电站、石门水利枢纽工程以及安康水电站等多项陕西省内大中型水利水电建设项目；
+      队伍也在辗转奋战中经过不断合并融入，成为统一整体，历史渊源可谓纵横交错，纷繁厚重。
+      在六十多年的历史进程中，三局人始终秉承了“特别能吃苦、特别能战斗”的水电建设者的光荣传统，
+      凭着“自强不息，勇于超越”的三局精神，独立承建和参建了国内外百余大中型水利水电工程及其它建筑工程，
+      在长江三峡水利枢纽、黄河小浪底水利枢纽、南水北调工程、向家坝水电工程等享誉国内外的世界级宏伟工程施工建设中，都有卓越的贡献。
+
+      以“创新、协调、绿色、开放、共享”为发展理念，
+      致力于为国家和人民提供优质的水电建设服务。
+
+    </p>
+
+
+    <p class="chinese-text">
+     1995年安康水电站竣工，恰逢市场化改革深入推进，依赖国家任务的三局面临转型阵痛。
+     市场经济浪潮席卷而来，原本国家分配任务的模式逐渐转为市场化竞标。职工不再频繁迁徙，
+     张岭便从临时驻扎点，正式成为万千家庭的固定家园。
+     </p>
+    <p class="chinese-text">
+    时光流转，随着市场经济的需要，水电三局总部及各分部已迁至西安以谋求发展，
+    职工和子弟们也四散各地，但张岭永远是他们魂牵梦萦的故乡。
+
+    </p>
+
+
+
+     <p class="chinese-text">
+
+
+    </p>
+
+    </div>
+    <div class="card-footer">
+    <h5 class="text-center">
+      <a href="{% url 'zlapp:sd3j1' %}">更多更详细内容请进入
+      </a>
+    </h5>
+    </div>
+
+  </div>
+
+  <p> </p>
+  <h4 class="text-center">致敬时代：每个时代都有每个时代的上甘岭</h4>
+  <div class="card">
+    <div class="card-header">
+      <h5 class="chinese-text">
+        2025年，世界处于动荡时期。俄乌冲突继续！中美贸易战，
+        2026年，世界更加动荡。
+      </h5>
+    </div>
+    <div class="card-body">
+      <p class="chinese-text">
+        2026年，世界不太平。
+        2026年，我们岁月静好！
+      </p>
+      <p clasw class="chinese-text">
+        其实，哪有什么岁月静好，抗美援朝，对印自卫反击战，金银滩596工程，
+        三线建设，对越自卫反击战。
+        
+        
+        
+        
+       </p>
+      <p class="chinese-text">  
+        前辈们的牺牲和付出，才换来如今的岁月静好！
+
+        
+
+
+
+     
+     
+      </p>
+
+     <p class="chinese-text">
+
+     </p>
+  
+
+     
+     <p class="chinese-text">
+
+     </p>
+     
+      
+
+    </div>
+    <div class="card-footer">
+    <h5 class="text-right">
+      <a href="{% url 'zlapp:respect1' %}">更多更详细内容请进入 </a>
+    </h5>
+    </div>
+  </div>
+
+
+
+  <p></p>
+
+
+  <h4 class="text-center">学校专题：</h4>
+  <div class="card">
+    <div class="card-header">
+    <h5 class="chinese-text">水电三局子弟学校，是张岭基地第一批楼房，位于张岭水电大街上。</h5>
+    </div>
+    <div class="card-body">
+     <p class="chinese-text">
+     
+      </p>
+    </div>
+    <div class="card-footer">
+    <a href="{% url 'zlapp:school' %}">更多内容请点击进入</a>
+
+
+    </div>
+
+  </div>
+
+  <h4 class="text-center">其他专题：</h4>
+  <div class="card">
+    <div class="card-header">
+      <h5 class="chinese-text">住在张岭基地的局机关及二级单位众多，</h5>
+    </div>
+    <div class="card-body">
+      <p class="chinese-text">
+  
+      </p>
+    </div>
+    <div class="card-footer">
+      <a href="{% url 'zlapp:other' %}">更多内容请点击进入</a>
+  
+  
+    </div>
+  
+  </div>
+
+  <p>   </p>
+
+  <h4 class="text-center">三餐四季：</h4>
+  <div class="card">
+    <div class="card-header">
+      <h5 class="chinese-text">安康位于秦岭南麓，特产丰富。</h5>
+    </div>
+    <div class="card-body">
+      <p class="chinese-text">
+  
+      </p>
+    </div>
+    <div class="card-footer">
+      <a href="{% url 'zlapp:features' %}">更多内容请点击进入</a>
+  
+  
+    </div>
+  
+  </div>
+
+
+
+
+  <h4 class="text-center">天南地北：</h4>
+  <div class="card">
+    <div class="card-header">
+      <h5 class="chinese-text">上世纪80年代前，水电三局是个典型的流动单位。在张岭定居，是水电人和安康的缘份。
+        对很多水电子弟来说，张岭是起点，是童年的回忆；对很多年过半百的职工来说，
+        张岭是后方安稳的家，是加油站，是归宿。</h5>
+    </div>
+    <div class="card-body">
+      <p class="chinese-text">
+  
+      </p>
+    </div>
+    <div class="card-footer">
+      <a href="{% url 'zlapp:bond' %}">更多内容请点击进入</a>
+  
+  
+    </div>
+    <a id="topic_link"> </a>
+  
+  </div>
+
+
+
+
+
+  <p></p>
+
+  
+  <h5 class="text-center">网站特别声明</h5>
+  <div class="card">
+    <div class="card-header">
+      <p class="chinese-text">《岭上岁月》，是记忆、是追随，也是传承！</p>
+    </div>
+
+    <div class="card-body">
+      <p class="chinese-text">
+         创建《岭上岁月》网站的目的，是想通过网络的模式，为曾经工作、
+         生活在张岭的人们建立一个精神家园，同时通过网络来收集整理一些材料。
+         因此，特在网站中增加了注册的功能，以供各位网友、校友发表意见、看法，
+         提供相关材料提供帮助。
+
+      </p>
+      <p class="chinese-text">
+        汉滨初中滨江校区（原滨江学校、水电三局子校）2007年创建的教育教学内部刊物的名称是《岭上风景》，
+        本网站用名《岭上岁月》，是记忆、是追随，更是传承！
+      </p>  
+      
+      <li>本网站的部分材料源于网络，版权归原作者所有，本网站只是引用；若引用不当，请作者指正。</li>
+      <li>本网站的学校部分材料源于学校的校志编辑，版权归学校所有，本网站只是引用；若引用不当，请指正。</li>
+
+
+
+    </div>
+    <div class="card-footer">
+      <a href="{% url 'zlapp:index' %}">返回首页</a>
+    
+    </div>
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}

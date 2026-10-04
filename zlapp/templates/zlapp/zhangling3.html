@@ -1,0 +1,292 @@
+{% extends "zlapp/base1.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="chinese-text">岭上岁月</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:zhangling1' %}">由“临时”到“永久”</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:zhangling2' %}">乡愁张岭,祝福安康!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'zlapp:zhangling3' %}">城市更新,“老城”涅槃！</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:zhangling4' %}">2026年，张岭更好！</a>
+        </li> <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:index' %}">返回首页</a>
+        </li>
+        
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+
+    {% for new in news %}
+      <li>{{ new.text }}   </li>
+      <p>{{ new.date_added|date:'Y年m月d日' }}</p>
+      <p>{{ new.cont|slice:"22" }}
+              {{ "..."}}
+      </p>
+
+    {% endfor %}
+
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+
+
+
+{% endblock cemian2 %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <div id="zl1">
+    <h5 class="text-center">岭上岁月：城市更新，老城涅槃，即将变身工业记忆。</h5>
+  </div>
+  
+  <p></p>
+
+  <p> </p>
+
+
+  <div class="card">
+    <div class="card-header">
+     <div id="zl3">
+      <h6 class="chinese-text">城市的发展，从不曾遗忘那些默默奉献的建设者，
+        他们的家园也不该在时代浪潮中被淹没。随着国家对企业改制工作的顺利推进，
+        以及安康市的城市化建设，张岭也渐渐与安康市融为一体。城市更新，
+        一座“老城”将涅槃重生，变身工业记忆，即将华丽转身。</h6>
+     </div>
+   </div>
+    <div class="card-body">
+      <p class="chinese-text">
+        水电三局机关和各二级单位相继迁往西安后，许多人定居西安、或退休后回故乡养老，
+        有的人下海创业或者调离三局；水电大街上更多的是老人和陌生的面孔，
+        少了朝气蓬勃的年轻人，少了熟人热切的问候，少了往日的生机和活力，
+        张岭基地烟火气淡了很多。
+          
+      </p>
+
+      <p class="chinese-text">
+        城市的发展，从不曾遗忘那些默默奉献的建设者，他们的家园也不该在时代浪潮中被淹没。
+        随着国家对企业改制工作的顺利推进，以及安康市的城市化建设，张岭也渐渐与安康市融为一体。
+      </p>
+      <p class="chinese-text">
+        2006年12月，按照国家的有关政策规定和改革发展方向，位于张岭的水电三局子校（含小学、初中、高中）整体移交给安康市汉滨区政府，
+        成为汉滨区教育局直属12年制学校，并更名为“滨江学校”。此后，水电三局公安处、幼儿园、职工医院等单位也相继移交或改制，
+      </p>
+      <img src="{% static 'images/zlapp/1zl/zl18.jpg' %}" alt="zl18"  class="img-fluid">
+      
+      <p class="text-center">子弟学校移交后更名为滨江学校，现已拆除重建</p>
+
+
+
+
+      <p class="chinese-text">        
+        但是，此时的张岭基地老旧房屋破败不堪、基础设施落后。
+      </p>
+
+
+      <p class="chinese-text">
+
+        2019年，随着全国国有企业职工家属区“三供一业”分离移交政策的落地，张岭迎来了与安康城市深度融合的新契机。
+        安康市委、市政府集中力量对张岭片区基础设施进行全方位改造升级，稳步推进供水、供电、供气保障能力提升，
+        实现物业管理规范化、精细化，人居环境发生了质的飞跃。
+      </p>
+      <p class="chinese-text">
+
+        2020年，随着安康市城市更新项目的推进，张岭片区的基础设施得到了进一步的提升。
+        随着旧房、棚户区改造、管网改造项目的实施和推进，拆掉了脏、乱、差的储藏室和临街违规乱搭乱建的房子后，
+        楼房与楼房之间的间距变大，视野顿时开阔；重新规划了汽车、摩托车停车位，张岭变得秩序井然、豁然开朗。
+      </p>
+      <img src="{% static 'images/zlapp/1zl/zl15.jpg' %}" alt="zl15" class="img-fluid">
+      <p class="text-center">改造后的张岭基地，焕然一新</p>
+
+      <p class="chinese-text"> 
+        鑫洲家园、山水岭居、洺悦府等新小区的开盘，也大大改善了张岭人民的居住条件，
+        借着文创东风，张岭基地旧貌换新颜了。
+      </p>
+      <p class="chinese-text">
+        现在再看张岭，发现街道拓宽，加盖了防护拦；多个旧小区新建了小广场，添置了健身器材、
+        安装了供居民休息的长条木椅；旧楼房楼道的墙面进行了粉刷，有的楼房外墙面还描绘了色彩鲜艳的图画；
+        坑洼不平的道路修好了，路灯也明亮起来了。
+      </p>
+      <img src="{% static 'images/zlapp/1zl/zl16.jpg' %}" alt="zl16" class="img-fluid">
+      <p class="text-center">改造后的张岭基地宣传墙</p>
+
+
+     <p class="chinese-text">
+        张岭的建设者们，在这场城市更新中，不仅完成了旧房改造、棚户区改造、管网改造，还在原有基础上，
+        新增了绿化带、公园、影剧院、文化广场、体育场等一系列公共设施，让张岭的居民们在新的环境中，
+        开辟出新的空间，打造出一座“老城”的涅槃重生。
+      </p>
+      <p class="chinese-text">
+        2022年，安康市政府再次发力，启动张岭片区城市更新项目建设。
+        这一次，更新不仅是补齐基础设施短板、强化民生保障力度，
+        更立足张岭临江的自然区位优势与深厚的工业文脉，坚持“保护为先、传承为要、创新为魂”，
+        精心规划打造了汉水天街、汉水风情长廊、记忆三局时光隧道、水电1983等特色文旅IP。
+        “我们希望，通过城市更新，让张岭从曾经的工业基地，转型为汉江边兼具颜值与内涵的‘城市会客厅’。”
+        安康市城投公司张岭片区城市更新项目负责人涂几金介绍，“既完整保留工业记忆的根与魂，
+        又赋予其文旅休闲、便民服务的新功能，让这片土地重新焕发往日的热闹与活力。”
+     </p>
+
+      <p class="chinese-text">
+        2025年11月24日，安康市自然资源局发布公告，将《安康中心城区黄沟张岭片区详细规划》
+        规划方案主要内容进行了公示，并广泛征求社会各界及公众意见。
+
+      </p>
+      <p class="chinese-text">
+        《规划》提出将黄沟张岭片区打造成为“一湖两岸”城市文旅融合示范区，
+         最终在片区内形成“一核、四轴、六区、多点”的空间结构。
+       </p>
+      <p class="chinese-text">
+         《规划》中涉及张岭片区的部分，提出深入挖掘黄沟张岭片区的特色资源，
+          融合水电三局工业记忆与汉江文脉，引导片区形成“活力记忆风貌区”等六个特色化的风貌分区，
+          并采用“重点引领、分期开发、有序推进”模式实现黄沟张岭片区建设的有序开发。
+      </p>
+      <a id="topic_link"> </a>
+      <p class="chinese-text">
+       《规划》提出在黄沟张岭片区内构建形成张岭公园、汉江大桥等多个景观节点。
+      </p>
+      <img src="{% static 'images/zlapp/1zl/zl17.jpg' %}" alt="zl17" class="img-fluid">
+      <p class="text-center">张岭片区的规划图</p>
+
+
+     <p class="chinese-text">
+        而在张岭片区内将形成活力记忆风貌区，以特色产业、文化体验为主要功能，
+        保留部分工业建筑肌理并进行更新改造，植入文化创意、特色商业等业态，
+        打造兼具历史记忆与现代活力的公共空间，成为展示片区工业文化传承与创新发展的活力片区。
+      </p>
+      <p class="chinese-text">
+        城市更新，老城涅槃，张岭即将变身工业记忆。
+      </p>
+      
+        
+
+
+
+    </div>
+    <div class="card-footer">
+      <h6 class="text-center">
+            
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:news' %}">①点赞 {{topic.likes}}</a>
+          <a href="{% url 'zlapp:topic' topic.id %}">②评论{{ topic.entry_set.all|length }}</a>
+          <a href="{% url 'zlapp:news' %}">③分享{{20}}</a>
+      
+        </div>
+      
+      </h6>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <p></p>
+
+
+
+
+  <p></p>
+
+
+
+  <div class="card">
+  <div class="card-header">
+    <h6 class="chinese-text">
+      评论主题：{{ topic }}
+    </h6>
+    
+    <h6 class="text-right">评论创建日期：{{ topic.date_added }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      评论数：{{ topic.entry_set.all|length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      ID：{{ topic.id }}
+    </h6>
+    
+    <div class="row justify-content-around bg-light ">
+      <a href="{% url 'zlapp:new_entry' topic.id  %}">我也要写评论 </a>
+      <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+    </div>
+
+
+
+  </div>
+    <div class="card-body">
+      <p class="chinese-text">
+      <ul>
+        {% for entry in topic.entry_set.all|dictsortreversed:"id"|slice:":5" %}
+        <li>
+          {% if entry.name == "" %}
+            <p> 匿名用户 IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+            <p>{{ entry.text }} </p>
+      
+          {% else %}
+            <p> 用户名：{{ entry.name }} IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+            <p>{{ entry.text }} </p>
+          {% endif %}   
+            
+        </li>
+        {% empty %}
+        <li>该主题内还没有留言！留言请点击进入：</li>
+      
+        {% endfor %}
+      </ul>
+      
+      </p>
+    
+
+    </div>
+
+    <div class="card-footer">
+      <h6 class="text-center">
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:new_entry' topic.id %}">我也要写评论 </a>
+          <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+        </div>
+      </h6>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}

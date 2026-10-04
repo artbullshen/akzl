@@ -1,0 +1,295 @@
+{% extends "zlapp/base1.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="chinese-text">岭上岁月</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link"  href="{% url 'zlapp:zhangling1' %}">由“临时”到“永久”</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'zlapp:zhangling2' %}">乡愁张岭祝福安康</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:zhangling3' %}">城市更新“老城”涅槃</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:zhangling4' %}">2026年张岭更好！</a>
+        </li> <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:index' %}">返回首页</a>
+        </li>
+
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+
+    {% for new in news %}
+      <li>{{ new.text }}   </li>
+      <p>{{ new.date_added|date:'Y年m月d日' }}</p>
+      <p>{{ new.cont|slice:"22" }}
+              {{ "..."}}
+      </p>
+
+    {% endfor %}
+
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+
+
+
+{% endblock cemian2 %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <div id="zl1">
+    <h5 class="text-center">岭上岁月：乡愁张岭，祝福安康！</h5>
+  </div>
+
+
+
+
+  <p></p>
+  <div class="card">
+    <div class="card-header">
+      <div id="zl2">
+        <h6 class="chinese-text">80年代的辉煌，00年代的破败，以及“外包”施工方式的变化，化成了一种祝福叫安康，
+          一种乡愁叫张岭。</h6>
+      </div>
+    </div>
+
+    <div class="card-body p-2">
+
+      <p class="chinese-text">
+        80年代，安康电站加快建设，水电三局也发展壮大，职工人数达万人，直接生产单位7个，
+        由于工程需要，专门修建了一条铁路专线用于物资和砂石料运输，专线中有一段和阳安线共线，
+        水电三局专门成立了铁路分局，并在张岭建设了一个火车站，
+        通过隧道和阳安铁路相连，用以保障工程施工。
+      </p>
+      <img class="card-img-top" src="{% static 'images/zlapp/1zl/zl9.jpg' %}" alt="" >
+      <p class="text-center">张岭火车站</p>
+
+
+
+      <p class="chinese-text">
+        经过几年的建设，张岭发展成为前张岭、张岭、后张岭三大社区，一到七个居民区，几万常住人口。
+        这里有着完整的社会服务体系，医院、学校、食堂、澡堂、电影院一应俱全，
+        延续着传统厂矿社区独有的烟火温情。
+      </p>
+
+      <p class="chinese-text">
+        对张岭的子弟们来说，童年记忆始终与基地的烟火气缠绕：在单位食堂吃着热气腾腾的饭菜，
+        说着带着北方口音的普通话；在公共澡堂里嬉笑打闹，在基地电影院追着最新的影片，
+        在灯光球场上打一场酣畅淋漓的篮球。矗立在张岭水电大街的原水电三局中学教学楼，俗称“飞机楼”，
+        更是几代人的青春地标。由于楼内迷宫般的结构，以及物化生实验室和计算机教室坐落其中，
+        成为小学生最神往的地方。这座1981年浇筑的教学楼，所用水泥和大坝施工水泥同一个标号，能抗八级地震。
+        鼎盛时期，三局在安康的子弟学校，就有三局中学、子弟一校（小学）、子弟二校（关庙砂石厂）、
+        子弟三校（前方大沙坝）四所学校。
+
+      </p>
+      <img class="card-img-top" src="{% static 'images/zlapp/4school/school2.png' %}" alt="" >
+      <p class="text-center">学校飞机楼鸟瞰，现已拆除重建</p>
+
+
+      <p class="chinese-text">
+         1995年安康水电站竣工，恰逢市场化改革深入推进，依赖国家计划投资、
+         接受国家任务的水电三局一下子没有了经济来源，面临转型阵痛。
+      </p>
+
+      <p class="chinese-text">
+        企业尝试着多种经营，相继创办了金州客车厂、激光防伪厂、冰棍厂、
+        铁合金厂等经营项目，又因交通不畅、信息闭塞、经营不善、
+        市场竞争激烈等原因相继关闭。职工下岗、再就业、自主择业，教师发百分之80的工资；
+        企业陷入了困境。
+      </p>
+      <img class="img-fluid " src="{% static 'images/zlapp/1zl/zl22.jpg' %}" alt="" >
+      <p class="text-center">红极一时的金州客车生产车间</p>
+
+      <p class="chinese-text">
+         市场经济浪潮席卷而来，原本国家分配任务的模式逐渐转为市场化竞标。
+         职工不再频繁迁徙，张岭便从临时驻扎点，正式成为万千家庭的固定家园。
+         家属和孩子们在这里安顿了下来，再要修电站，就只有施工的人去漂了，
+         这叫做“外包”。一个电站修完就前往另外一个电站，漫湾、大峡、
+         长江三峡、黄河小浪底、南水北调工程、向家坝、巴基斯坦尼鲁姆杰勒姆水电站等。
+         但是在漂泊的时候，后方有个家了。
+
+      </p>
+
+      <p class="chinese-text">
+        前线职工在祖国各地、海外非洲、中东的工地上挥洒汗水，后方家属子弟则在张岭基地安稳成长。
+        对三局人而言，张岭早已超越了“家属区”的定义，成为心中最温暖的故乡。
+
+      </p>
+
+      <p class="chinese-text">
+        进入市场经济后的水电三局，多种经营未能实现突破，转身专注自己的主业，
+        投标，工程施工，职工长年在外打拚、漂泊。彼时的安康，交通闭塞，
+        从安康乘火车到西安，需要经阳安线到汉中的阳平关，再经宝成线、陇海线到西安，
+        时长10个小时以上，公路交通需要翻越秦岭，更是凶险重重。为了企业的生存和发展，
+        1997年水电三局局机关部分单位先行迁往西安，实行西安、安康两地办公；
+        1999年4月，水电三局局机关全部正式转移西安，完成总部搬迁。
+        各下属单位也相继从陕南小城安康，迁往交通便利的省会西安，留下他们的父母、
+        他们的家庭、他们的亲朋好友，也留下了他们成长的足迹。
+        水电三局的职工和三局子弟们也四散各地，但张岭永远是他们魂牵梦萦的故乡。
+      </p>
+
+      <p class="chinese-text">
+        随着水电三局总部迁往西安，“企业包办”的福利消失，张岭仿佛被按下了“减速键”。
+      </p>
+
+      <p class="chinese-text">
+        昔日的繁华渐渐褪去，街道上行人稀疏、车辆渐少，曾经崭新的楼房被岁月染上斑驳痕迹，墙角爬满青苔；
+        老旧的排水管道在雨季不堪重负，积水漫过路面；狭窄的道路难以跟上汽车保有量的增长，拥堵成为常态。
+        这颗曾镶嵌在汉江北岸的“工业明珠”，因基础设施老化、功能配套弱化，渐渐陷入了沉寂衰败的困境。
+
+        工程局建设之初，人员来自五湖四海。改革开放后，有的人辞职、创业或者调离三局后定居在西安等其它城市。
+        水电大街上多了行动不便的老人，多了陌生的面孔，少了朝气蓬勃的年轻人，少了熟人热切的问候，
+        少了往日的生机和活力，张岭基地逐渐淹没在历史的长河中了。
+        但在春节假期期间，水电大街又会呈现出短暂的热闹和喧嚣，
+        街头的横幅“有一种祝福叫安康，有一种思念叫张岭”，让远方回家探亲的人们，感到温馨。
+
+      </p>
+      <img class="img-fluid " src="{% static 'images/zlapp/1zl/zl12.jpg' %}" alt="" >
+      <p class="text-center">春节前的张岭</p>
+
+      <a id="topic_link"> </a>
+      <p class="chinese-text">
+        在新中国庞大的工业建设浪潮中，张岭这样的社区或许只是微不足道的注脚——它们未曾载入正史，鲜有媒体聚焦，
+        唯有那些在此奉献青春、出生成长的人们，始终铭记着它的存在。
+
+      </p>
+
+
+      <p class="chinese-text">
+        还有山水之间的那道宏伟的拦河大坝，以及这万家灯火，永远铭记着他们的存在！
+
+      </p>
+      <img class="card-img-top" src="{% static 'images/zlapp/1zl/zl23.jpg' %}" alt="" width="480" height="326">
+      <p class="text-center">安康汉江一桥的灯光</p>
+
+
+
+
+      <p class="chinese-text">
+
+
+      </p>
+
+    </div>
+
+    <div class="card-footer">
+
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:news' %}">①点赞 {{topic.likes}}</a>
+        <a href="{% url 'zlapp:topic' topic.id %}">②评论{{ topic.entry_set.all|length }}</a>
+        <a href="{% url 'zlapp:news' %}">③分享{{20}}</a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <p> </p>
+
+
+
+
+  <p></p>
+
+
+
+
+
+
+
+  <p></p>
+
+
+
+  <div class="card">
+  <div class="card-header">
+    <h6 class="chinese-text">
+      <large>评论主题：{{ topic }}</large>
+    </h6>
+
+    <h6 class="text-right">评论创建日期：{{ topic.date_added }}&nbsp; &nbsp;
+      评论数：{{ topic.entry_set.all|length }}&nbsp; &nbsp;&nbsp;&nbsp;ID：{{ topic.id }}
+    </h6>
+
+    <div class="row justify-content-around bg-light ">
+      <a href="{% url 'zlapp:new_entry' topic.id  %}">我也要写评论 </a>
+      <a href="{% url 'zlapp:topic' topic.id  %}">查看全部评论</a>
+    </div>
+
+
+  </div>
+    <div class="card-body">
+      <p class="chinese-text">
+      <ul>
+        {% for entry in topic.entry_set.all|dictsortreversed:"id" %}
+        <li>
+
+          <p> 用户名：{{ entry.name|default:"访客" }} &nbspIP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p> {{ entry.text }} </p>
+        </li>
+        {% empty %}
+        <li>该主题内还没有留言！留言请点击进入：</li>
+
+        {% endfor %}
+      </ul>
+
+      </p>
+
+
+
+    </div>
+
+    <div class="card-footer">
+      <h6 class="text-center">
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:new_entry' topic.id %}">我也要写评论 </a>
+          <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+        </div>
+
+      </h6>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}

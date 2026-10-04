@@ -1,0 +1,18 @@
+# A simple web application.
+
+{% block title %}
+这个测试页用于链接传递参数测试
+{% endblock %}
+
+<h1>网站介绍</h1>
+<p>
+<a href="{% url 'zlapp:test' 'zlapp:zhangling21' 7  %}">我也要写评论 </a>
+  {{result}}
+
+</p>
+<p>现在进行网页的测试，路由关系还有些混乱。</p>
+<p>这是一个测试页面！！！！</p>
+
+
+
+

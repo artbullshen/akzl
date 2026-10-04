@@ -1,0 +1,393 @@
+{% extends "zlapp/base1.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="chinese-text">岭上岁月</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:zhangling1' %}">由“临时”到“永久”</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:zhangling2' %}">乡愁张岭，祝福安康！</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:zhangling3' %}">城市更新，“老城”涅槃！</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" href="{% url 'zlapp:zhangling4' %}">2026年，张岭更好！</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:index' %}">返回首页</a>
+        </li>
+        
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+
+    {% for new in news %}
+      <li>{{ new.text }}   </li>
+      <p>{{ new.date_added|date:'Y年m月d日' }}</p>
+      <p>{{ new.cont|slice:"22" }}
+              {{ "..."}}
+      </p>
+
+    {% endfor %}
+
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+
+
+
+{% endblock cemian2 %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <div id="zl1">
+    <h5 class="text-center">岭上岁月：2026年，张岭更好，安康更好！</h5>
+  </div>
+    
+  <div class="card">
+    <div class="card-header">
+      <p class="chinese-text">心之所向，素履以往；岁月沉香，未来可期。
+        随着城市更新项目的持续推进，张岭正以全新的姿态，
+       在汉江北岸书写更加璀璨的崭新篇章。
+      </p>
+    </div>
+    <div class="card-body p-2">
+      <p class="chinese-text">
+        对于第一代水电建设者们来说，定居在一个地方几十年，想都没想过。
+        他们曾是三门峡水电站、刘家峡水电站、青铜峡水电站的建设者，
+        他们曾是三线建设的参与者，安康水电站的建设者。
+      </p>
+      <p class="chinese-text">
+        上世纪50年代，这群青年人在河南三门峡修建三门峡水电站，
+        意气风发，指点江山。电站建成后，打点行装，前往下一个电站，
+        青铜峡、刘家峡、石门、石泉，用电建人的话说：“哪里有江河，哪里就是家”。
+      </p>
+      <p class="chinese-text">
+        那时候，全中国都是他们的战场，他们就是水电战线的野战军，
+        南征北战，搬家、转移，这都不是事，对于流动单位来说，
+        这就是生活日常。断舍离，不存在，搬一次家，就要收拾一次，
+        用不着的早就送人或扔了。
+      </p>
+      <p class="chinese-text">        
+        家乡还记得，但已经不能常回去了，一年有限的几次探亲假，回去看看，
+        工作忙也不能多停留。家乡话，单位里老乡之间会说说。
+        那个年代的人们，一心都在工作上。     
+      
+      </p>
+      <p class="chinese-text">
+        对于他们的孩子来说，工地就是家，老家偶尔会回去，生活环境的不同，也只是一个过客。
+      </p>
+      <p class="chinese-text">        
+        定居在安康、养老在安康，纯属偶然，是国家改革浪潮催生出来的，
+        也是水电建设者和安康的缘。
+        和甘肃、宁夏、青海的满眼黄土、漫天黄沙相比，
+        安康气候湿润、植被丰富，自然环境比甘肃、宁夏要好太多了。
+      </p>
+      <p class="chinese-text">
+        “此心安处是吾乡”。
+      </p>
+      <p class="chinese-text">
+        但是，安康的交通确实太不方便了。      
+        
+      </p>
+      <p class="chinese-text">
+        
+      </p>
+      <p class="chinese-text">
+        安康位于陕西省东南部，北依秦岭，南靠巴山，汉水横贯东西，
+        河谷盆地（安康盆地）居中，下辖1区9县。因境内土壤含硒元素丰富，
+        被誉为“中国硒谷”。安康地处秦巴腹地，汉水之滨，又被誉为“西安后花园”。
+      </p>
+      <p class="chinese-text">  
+        但在过去，西安人要想来自己的后花园却不容易！看陕西省地形地貌图便知。
+      </p>
+      <img src="{% static 'images/zlapp/1zl/zl19.jpg' %}" alt="安康地形图" class="img-fluid">
+      <p class="text-center">陕西省地形地貌图</p>
+      <p class="chinese-text">  
+        从地形图上可以看出，安康是“八山一水一分田”，良田沃土极少，耕地面积有限，
+        交通闭塞。同在陕南的汉中则被称为“小江南”，汉高祖刘邦争天下的基地。
+      </p>
+      <p class="chinese-text">  
+        1964年中央提出“三线建设”决策时就明确指出：“真正的三线是青海、陕南、
+        甘南、攀枝花”。陕南的汉中，靠近宝成铁路，物资容易进去，
+        成为重要的国防工业基地，大量工厂平地而起。
+        汉江下游的湖北十堰，也建造了第二汽车制造厂。
+
+      </p>
+      <p class="chinese-text">
+        而中间的安康，恰恰被忽视了，因为山太高、交通不便。
+        当然凡事都有例外，汉中012基地540厂，
+        对外名称国营巴山机械厂，就建在安康县城东南枣园，
+        1983年洪灾损失惨重，迁回河南。
+        这也是在安康唯一存在过的三线军工厂。
+      </p>
+      <p class="chinese-text">
+        1969年，中苏关系持续恶化，边境发生冲突，局势陡然紧张，
+        中央决定修建“襄渝铁路”，把中部和西南的三线建设重要城市连起来，
+        作战备用。
+      </p>
+      <p class="chinese-text">
+        1970年，襄渝铁路的建设正式开始，安康作为三线建设的重要节点城市，
+        迎来了新的发展机遇。
+      </p>
+      <p class="chinese-text">        
+        1979年12月襄渝铁路全线建成，并正式交付运营，使安康到重庆、
+        十堰的交通时间大大缩短，大大方便了安康人民的出行。
+
+      </p>
+      <p class="chinese-text">
+        安康的交通不便，我们有切身体验。
+      </p>
+      <p class="chinese-text">
+        1970年冬季，我不到10岁，我们一家人随父母从甘肃刘家峡水电站,
+        前往石泉水电站工地转移，从兰州乘火车到达西安后，
+        先要在西安转运站（西安东郊）等着，有合适的车和天气后，
+        才能坐在运送物资的解放卡车板厢里，往石泉去；天寒地冻，
+        人坐在敞着的汽车大厢上，裹着被子也不觉着暖和。
+      </p>
+      <p class="chinese-text">
+        西安到石泉，从西安南边的沣峪口进山，走210国道到宁陕，
+        一般要在宁陕过一夜，第二天到石泉，需要两天时间。
+      </p> 
+      <p class="chinese-text">
+        三线建设，襄渝铁路、阳安铁路、石泉水电站、
+        安康水电站的建设，打破了这里的沉寂和封闭，
+        让更多的人有机会见识外面的世界。
+      </p>
+      <p class="chinese-text">
+        安康的交通虽因襄渝铁路的通车，使出行武汉、郑州、
+        重庆等铁路枢纽极为便利，但安康到省会西安的火车，
+        因为要绕行到汉中的阳平关，再经宝成线和陇海线才能到达西安，
+        需要近二十个小时。
+      </p>
+      <p class="chinese-text">
+        西安人要想来后花园赏花逛景，还是不容易，
+        安康人想去省城开会办事也不容易。
+
+      </p>
+      <p class="chinese-text">
+        巨大的变化，还是进入新世纪后。
+      </p>
+      
+      <p class="chinese-text">  
+        2001年10月西康铁路建成通车。西安到安康只需要4个小时。
+        
+      </p>
+      <p class="chinese-text">
+        此后十几年，西康高速公路、十天高速公路、包茂高速公路相继建成，
+        安康到西安、十堰、汉中等地实现3小时到达。安康不再是被大山环绕、闭塞的山城。
+
+      </p>
+      
+      <p class="chinese-text">
+        2025年12月25日，银百高速全线贯通。通车后，
+        重庆城口到安康的通行时间从140分钟缩短至约40分钟。
+        安康到重庆主城区只需6小时。
+      </p>
+      <p class="chinese-text">
+        交通的便捷，助力安康的发展。2000年，安康成功升级地级市，
+        城市建设进入快车道，交通设施不断完善，公路、铁路、
+        水运、航空等交通方式全面覆盖，城市面貌焕然一新。        
+        
+      </p>
+      <p class="chinese-text">
+        由于安康是国家南水北调中线工程的核心水源区，承担着“一江清水供北京”
+        的光荣使命和政治责任，所以安康市的发展注重生态环境保护和可持续发展。
+        
+      </p>
+
+      <p class="chinese-text">
+        2026年9月28日西康高铁通车‌。通车后，西安至安康的铁路运行时间，
+        由现在的3小时左右缩短至‌1小时以内‌。‌‌
+      </p>
+      <img src="{% static 'images/zlapp/1zl/zl25.jpg' %}" alt="安康西站" class="img-fluid">
+      <p class="text-center">安康西站</p>
+
+
+      <p class="chinese-text">
+        ‌‌
+      </p>
+      <p class="chinese-text">       ‌
+        安康到重庆的康渝高铁计划于‌2028年12月建成运营‌。‌‌‌
+        建成后，安康至重庆的铁路通行时间将由原来的近‌7小时缩短至1.5小时‌左右
+        ，西安到重庆的铁路实现3小时到达。        
+      </p>
+
+      <p class="chinese-text">
+        安康正迎来的自己的高铁时代，张岭也将以全新的姿态，
+        在汉江北岸书写更加璀璨的崭新篇章。
+        
+      </p>
+      <p class="chinese-text">
+        
+      </p>
+      
+      
+      
+      <p class="chinese-text">
+        有人说，家是出生的地方。
+        不，出生的地方只是故乡。
+      </p>
+      <p class="chinese-text">        
+        此生行走天地间--我，就是自己的家！
+        我走到哪里，光就亮到哪里，家，就在哪里！
+      </p>
+      <p class="chinese-text">
+        有水电人感叹：“建了一辈子电站， 为万家送去光明，
+        身后却没有一盏灯是为自己点亮。”        
+        
+      </p>
+      <p class="chinese-text">
+        其实，不止是水电建设者。修铁路的、架高压线的、
+        建港口的、架桥的，哪一个不是这样。
+
+      </p>
+      <p class="chinese-text">
+        他们把最好的年华铺在路上、架在线上、砌在墙上。
+        等路通了、灯亮了、楼立起来了，
+        他们却像影子一样退场了，连个痕迹都没留下。
+      </p>
+      <p class="chinese-text">
+        他们就是新时代的志愿军战士，在祖国需要的时候，
+        挺身而出，造就了共和国的铁骨钢筋。
+      </p>
+      <p class="chinese-text">
+        他们造就了这万家灯火，天堑变通途，祖国岁月静好！
+      </p>
+      <img src="{% static 'images/zlapp/1zl/zl26.jpg' %}" alt="张岭" class="img-fluid">
+      <p class="text-center">正在更新改造的张岭五区一景</p>
+      
+      <p class="chinese-text">
+        张岭没有忘记，永远有盏灯为他们点亮！安康没有忘记，
+        更新改造处处留下他们的痕迹！
+      </p>
+
+      <p class="chinese-text">
+        2026年，世界不太平。2026年，我们岁月静好！
+        
+      </p>
+
+      <p class="chinese-text">
+        2026年，张岭更好！安康更好！
+
+
+      </p>
+    </div>
+    <div class="card-footer">
+      <h6 class="text-center">
+      
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:news' %}">①点赞 {{topic.likes}}</a>
+          <a href="{% url 'zlapp:topic' topic.id %}">②评论{{ topic.entry_set.all|length }}</a>
+          <a href="{% url 'zlapp:news' %}">③分享{{20}}</a>
+      
+        </div>
+      
+      </h6>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <p></p>
+
+
+
+  <div class="card">
+    <div class="card-header">
+      <h6 class="chinese-text">
+        评论主题：{{ topic }}
+      </h6>
+      
+      <h6 class="text-right">评论创建日期：{{ topic.date_added }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        评论数：{{ topic.entry_set.all|length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ID：{{ topic.id }}
+      </h6>
+      
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:new_entry' topic.id  %}">我也要写评论 </a>
+        <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+      </div>
+
+
+    </div>
+
+    <div class="card-body">
+      <p class="chinese-text">
+      <ul>
+        {% for entry in topic.entry_set.all|dictsortreversed:"id"|slice:":5" %}
+        <li>
+          {% if entry.name == "" %}
+          <p> 匿名用户 IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+      
+          {% else %}
+          <p> 用户名：{{ entry.name }} IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+          {% endif %}
+      
+        </li>
+        {% empty %}
+        <li>该主题内还没有留言！留言请点击进入：</li>
+      
+        {% endfor %}
+      </ul>
+      
+      </p>
+     
+    
+
+    </div>
+
+    <div class="card-footer">
+      <h6 class="text-center">
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:new_entry' topic.id %}">我也要写评论 </a>
+          <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+        </div>
+      </h6>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}

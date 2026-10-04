@@ -1,0 +1,57 @@
+{% extends "bjxzapp/base.html" %}
+
+{% block cemian %}
+  <p>我的主题 </p>
+
+  <ul>
+    {% for topic in topics %}
+
+       <li><a href="{% url 'bjxzapp:topic' topic.id %}">{{ topic }}</a></li>
+
+    {% empty %}
+      </li>No topics have been added yet.</li>
+    {% endfor %}
+
+  </ul>
+
+
+{% endblock cemian %}
+
+
+
+
+
+{% block main1 %}
+
+  <h3>留言内容: {{ topic }}
+  </h3>
+
+  <p>评论内容:</p>
+
+  <p>
+    <a href="{% url 'bjxzapp:new_enntry' topic.id %}">增加新的评论</a>
+  </p>
+
+
+  <ul>
+    {% for entry in entries %}
+      <li>
+        <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+        <p>{{ entry.text|linebreaks }}</p>
+
+        <p>
+          <a href="{% url 'bjxzapp:edit_enntry' entry.id %}">编辑条目</a>
+        </p>
+
+      </li>
+    {% empty %}
+      </li>There are no entries for this topic yet.</li>
+    {% endfor %}
+
+  </ul>
+
+
+
+{% endblock main1 %}
+
+

@@ -1,0 +1,305 @@
+{% extends "zlapp/base1.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="chinese-text">岭上岁月</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'zlapp:zhangling1' %}">由“临时”到“永久”</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:zhangling2' %}">乡愁张岭祝福安康</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:zhangling3' %}">城市更新“老城”涅槃</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:zhangling4' %}">2026年张岭更好！</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:index' %}">返回首页</a>
+        </li>
+
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+
+    {% for new in news %}
+      <li>{{ new.text }}   </li>
+      <p>{{ new.date_added|date:'Y年m月d日' }}</p>
+      <p>{{ new.cont|slice:"22" }}
+              {{ "..."}}
+      </p>
+
+    {% endfor %}
+
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+
+
+
+{% endblock cemian2 %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <div id="zl1">
+    <h5 class="text-center">岭上岁月：由“临时”到“永久”的基建部落--张岭。</h5>
+  </div>
+
+  <div class="card">
+
+    <div class="card-header">
+
+      <h6 class="chinese-text">陕西安康张岭，是水电三局建设安康水电站时，同期建设的临时生活基地。
+        谁曾想，这份“临时”最终酿成了“永久”。
+      </h6>
+
+    </div>
+    <div class="card-body">
+
+    <p class="chinese-text">
+    在新中国庞大的工业建设浪潮中，张岭这样的社区或许只是微不足道的注脚。
+    它们没有青海冷湖石油小镇的年代久远、规模宏大、苍凉壮观；
+    也没有青海金银滩221厂哪样的惊天动地，艰苦卓绝。
+    它们未曾载入正史，鲜有媒体聚焦，唯有那些在此奉献青春、出生成长的人们，
+    始终铭记着它们的存在。
+    </p>
+
+
+    <p class="chinese-text">
+    这一切，都缘于安康水电站，这座矗立在汉江陕西段、
+    距安康城区上游18公里火石岩的汉江开发治理骨干工程。
+    </p>
+
+    <h6 class="text-center">
+      <img class="img-fluid" src="{% static 'images/zlapp/2sanju/akdz2.png' %}" alt=""  >
+      <p>安康水电站，最大坝高128米，坝顶长541.5米，总装机852.5MW；<br>
+        1978年3月开工，1990年12月首台机组发电，2000年工程全部竣工。</p>
+    </h6>
+
+    <p class="chinese-text">
+    伫立汉江之滨，凝望火石岩峡谷间横亘的巨型大坝，
+    方能读懂三局人晒出老照片时的深情——
+    这矗立几十年的钢筋水泥丰碑，藏着一代人的家国记忆。
+    1974年，安康水电站坝址勘测小分队怀揣经纬仪踏入这片荒岭，彼时他们或许未曾料想，
+    脚下的土地不仅将贯通西部能源大动脉，更会崛起一座承载万千家庭的基建部落——张岭。
+    </p>
+
+    <p class="chinese-text">
+    安康水电站位于汉江上游陕西省安康市城西上游18公里的汉江火石岩， 是开发治理汉江的骨干工程；
+    电站上游距石泉水电站170公里，下游距丹江口水电站约260公里。
+    安康水电站是以发电为主，兼有航运、防洪、灌溉及旅游等综合效益的I等大型水电站工程。
+    电站装机容量为85.25万千瓦，总库容25.85亿立方米，年发电量29.84亿千瓦时；
+    建成后将成为陕西电力系统中的骨干电源，为襄渝、阳安两条电气化铁路提供可靠的电力。
+    </p>
+    <p class="chinese-text">
+      安康水电站由西北勘测设计院设计，水利电力部第三工程局（简称水电三局）施工。
+    </p>
+
+    <h6 class="text-center">
+      <img class="card-img-top" src="{% static 'images/zlapp/2sanju/sgsy.png' %}" alt="水工试验" >
+      <p>设计院在进行等比例模型的水工试验。</p>
+    </h6>
+
+    <p class="chinese-text">
+      建设安康水电站的水电三局的发展历史，可以追溯到1955年三门峡水利枢纽工程和伊河陆浑水库工程。
+      这支建设队伍中，有抗美援朝结束后，军队集体转业的老兵，有清华水利系的大学毕业生，有来自北京、
+      上海、广州以及全国各地的青年人，他们从祖国的四面八方，汇聚到中国水电建设的伟大事业，
+      为刚刚成立的共和国修建一座又一座的水电站。
+    </p>
+
+    <p class="chinese-text">
+      一个电站大概要修几年的时间，修完后，工程局的人就集体迁往下一个地点修下一个水电站。
+      峡谷才能修电站，所以多少年来，他们都是从一个山沟沟到另一个山沟沟，三门峡、青铜峡、刘家峡、
+      石门、石泉，听起来就是些险峻荒凉之地。多少年的跋山涉水，一步一步走过，工程在哪儿，人就到哪儿。
+      那个时候，住的房子是干打垒，家家户户最重要的家当就是大木头箱子，每次迁移，就把全部的家当装箱，
+      人和箱子一起坐上施工运料的大卡车，迁往下一个工地（电站）。
+    </p>
+
+
+
+    <p class="chinese-text">
+    1975年水电电力部第四工程局石泉分局的部分员工由石泉迁至安康，为安康水电站的开工建设进行筹备。
+    在此之前，水电四局石泉分局的职工家属聚居在安康地区石泉县，修建石泉水电站，生活条件极为艰苦。
+    1978年，水电四局石泉分局职工从石泉整体搬迁至陕西安康张岭，
+    1982年9月，水电四局石泉分局（当时名为十五局）与建设陕西汉中石门水利枢纽工程的三局合并，
+    职工总数突破1.5万人，并命名为水利水电第三工程局，共同建设安康水电站，
+    张岭这里也就被称作“水电三局基地”，成了职工家属的临时庇护所。
+    </p>
+
+
+
+    <p class="chinese-text">
+    1978年3月安康水电站正式开工建设后，火石岩施工现场称为前方，
+    张岭这片江边坡地，做为万余名职工及家属的临时庇护所，称为后方。
+    谁曾想，这份“临时”最终酿成了“永久”。
+    </p>
+
+
+    <h6 class="text-center">
+      <img class="card-img-top" src="{% static 'images/zlapp/1zl/zl1.jpg' %}" >
+      <p>从安康一桥北望当时的张岭 </p>
+
+    </h6>
+
+    <p class="chinese-text">
+    上世纪八十年代修建安康水电站时，工程局里很多最老的员工已经是爷爷辈了，人越来越多，加之改革开放，
+    改变了先生产后生活的工作思路，1982年的两局合并后职工人数增加，职工住房紧缺，
+    加之安康水电站处于建设高峰期，水电三局为保证工程进度，又招收了大量本地的优秀人才；
+    于是，为了让前线建设者无后顾之忧，水电三局倾尽全力推进生活基地建设，将这里打造成了功能完备、
+    烟火氤氲的传统厂矿社区，这里也逐步成为一座名副其实的“城中小城”。
+
+    </p>
+
+    <h6 class="text-center">
+      <img class="card-img-top" src="{% static 'images/zlapp/1zl/zl3.jpg' %}" >
+      <p>张岭的早晨，职工乘通勤车上前方工地 </p>
+
+    </h6>
+
+    <p class="chinese-text">
+    从此张岭有了厂房、住宅楼、食堂、商店、农贸市场，学校、医院、影剧院、澡堂等也相继建成。
+    张岭的家属区从一区到七区，
+    家属区的平房，也逐渐被推平改建成了楼房，张岭的轮廓愈发清晰。水电三局张岭基地暨“水电城”初具规模，从此安康城便形成了以安康老城区、
+    安康铁路分局的“铁路城”、水电三局张岭基地的“水电城”三足鼎立之势。
+    更是由于铁路职工和水电职工走南闯北，“铁路城”和“水电城”，也成为那个年代安康人心目中的两大时尚之城。
+    </p>
+
+    <h6 class="text-center">
+      <img class="card-img-top" src="{% static 'images/zlapp/1zl/zl4.jpg' %}">
+      <p>水电大街上的张岭影剧院 </p>
+
+    </h6>
+
+
+
+    <p class="chinese-text">
+    1983年7月31日，汉江暴发特大洪涝灾害。滚滚洪流瞬间吞噬了安康老城区。
+    幸运的是，张岭因地势较高，成为少有的安全避风港。彼时的水电三局职工，虽多为异乡来客，却早已将安康视为第二故乡。面对同胞受难，他们从未想过偏安一隅。这份与安康休戚与共的深情，化作挺身而出的勇气，水电三局迅速部署各单位组建抢险救灾突击队，1000余名职工义无反顾地奔赴被洪水围困的老城区，分片开展生死救援，累计从洪水中救出被困灾民2000多人。
+    与此同时，张岭全面敞开怀抱：医院、学校、食堂……所有服务设施尽数开放，紧急组建9个灾民接待站，为7000多名受灾群众遮风挡雨。三局职工医院全员上阵，累计接诊8000余人次；职工食堂连夜赶制2.91万公斤熟食，分发到受灾群众手中。
+    </p>
+    <a id="topic_link"> </a>
+    <p class="chinese-text">
+    洪水退去，水电三局再次主动扛起责任，毅然承担了安康城区灾后现场清理的任务。抽排积水、清理垃圾、平整场地……在废墟上，水电三局的建设者们用双手刨开泥泞，为安康老城区重启新生之路。
+    这份患难之时的鼎力相助，深深镌刻在安康人的集体记忆里，成为张岭与安康、三局人与本地人之间无法割舍的情感纽带，也为这片土地的工业底色，增添了最温暖的人文光芒。
+    </p>
+    </div>
+
+    <div class="card-footer">
+
+      <h6 class="text-center">
+
+
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:news' %}">①点赞 {{topic.likes}}</a>
+          <a href="{% url 'zlapp:topic'  topic.id %}">②评论{{ topic.entry_set.all|length }}</a>
+          <a href="{% url 'zlapp:news' %}">③分享{{20}}</a>
+
+        </div>
+
+      </h6>
+
+    </div>
+  </div>
+
+  <p></p>
+
+  <p> </p>
+
+  <p></p>
+
+  <div class="card">
+    <div class="card-header">
+      <h6 class="chinese-text">
+        评论主题：{{ topic }}
+      </h6>
+
+      <h6 class="text-right">评论创建日期：{{ topic.date_added }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          评论数：{{ topic.entry_set.all|length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          ID：{{ topic.id }}
+      </h6>
+
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:index' %}">返回首页</a>
+        <a href="{% url 'zlapp:zhangling1' %}">返回本页页首</a>
+        <a href="{% url 'zlapp:new_entry'  topic.id   %}">我也要写评论 </a>
+        <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+      </div>
+
+    </div>
+
+    <div class="card-body">
+      <p class="chinese-text">
+        <ul>
+          {% for entry in topic.entry_set.all|dictsortreversed:"id"|slice:":5" %}
+        <li>
+          {% if entry.name == "没有获取到用户名" %}
+            <p> 访客  IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+            <p>{{ entry.text }} </p>
+
+          {% else %}
+             <p> {{ entry.name }} IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+             <p>{{ entry.text }} </p>
+
+           {% endif %}
+
+
+
+        </li>
+        {% empty %}
+        <li>该主题内还没有留言！留言请点击进入：</li>
+
+        {% endfor %}
+      </ul>
+
+    </p>
+
+
+    </div>
+
+    <div class="card-footer">
+      <h6 class="text-center">
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:new_entry' topic.id  %}">我也要写评论 </a>
+          <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+        </div>
+      </h6>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}

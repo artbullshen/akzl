@@ -1,0 +1,19 @@
+{% extends "zlapp/base1.html" %}
+
+{% block main1 %}
+  <h3 class="text-center">张岭最新动态</h3>
+  <ul>
+    {% for new in news %}
+      <li>
+      <h6>{{ new.text }}</h6>
+      <p>{{ new.date_added }}</p>
+      <p>{{ new.cont }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+
+{% endblock main1 %}
+
+

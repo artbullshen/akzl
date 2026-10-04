@@ -1,0 +1,238 @@
+{% extends "zlapp/base1.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="text-center">学校的历史</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school11' %}">学校的历史：溯源</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school12' %}">学校的历史：辉煌和没落</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'zlapp:school13' %}">学校的历史：生存和改制</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school14' %}">学校的历史：机遇和发展</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school' %}">返回学校专题主页</a>
+        </li>
+
+        
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+
+    {% for new in news %}
+      <li>{{ new.text }}   </li>
+      <p>{{ new.date_added|date:'Y年m月d日' }}</p>
+      <p>{{ new.cont|slice:"22" }}
+              {{ "..."}}
+      </p>
+
+    {% endfor %}
+
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+
+
+
+{% endblock cemian2 %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <div id="zl1">
+    <h5 class="text-center">学校的历史：生存和改制</h5>
+  </div>
+  
+  <div class="card">
+    <div class="card-header">
+    <h6 class="chinese-text">2006年12月到2020年7月，
+      企办子弟学校移交汉滨区，更名为“滨江学校”，再图新的发展！ </h6>
+    </div>
+    <div class="card-body">
+      <p class="chinese-text">
+        
+      </p>
+      
+      <p class="chinese-text"> 
+        2006年12月13日因国家的企业分离办社会的职能政策，三局子校由企办子弟学校移交变成地方学校，
+        并更名为“滨江学校”，由此，开启了学校发展的新一页。
+      </p>
+      
+      <p class="chinese-text">
+        这时的学校共占地27,600平米,建筑面积14,066平米，分为滨江学校小学部和滨江学校中学部，
+        集小学、初中、高中为一体。
+     </p>
+      
+     <p class="chinese-text">
+        不可否认，有着35年历史的滨江学校，它曾经的办学规模、教育质量、校园文化、
+        师生的精神面貌都名噪一时。如何让辉煌再现，“回归”地方，被认为是学校的一次前所未有的机遇。
+     </p>
+      
+     <p class="chinese-text">
+        因此学校把“调整观念，适应变化，抓住机遇，尽快发展”确定为新的工作思路，
+        把学校目标定为：“立足江北，面向汉滨，放眼安康，重塑品牌”。
+        当复兴的机遇重现，复兴的思路清晰，复兴的目标明确时，让我们把“豪爽、大度、兼容”
+        的滨江学校精神注入到复兴的道路中去，迎接她的再次辉煌。
+    </p>
+      
+    <p class="chinese-text">
+        到2013年，滨江学校小学部共有17个教学班，学生760人；中学部初中13个教学班，
+        学生561人；高中8个教学班，学生295人。
+        在职教职工161人，离退休教师139人，在职教师中，具有高级职称者70人，中级职称者66人，
+        学历达标100%。这些数据足可以表明，滨江学校的复兴指日可待。
+      
+
+      </p>
+
+      <p class="chinese-text">
+        
+        
+        
+      </p>
+  
+      <p class="chinese-text">
+        
+         
+      </p>
+        
+      <p class="chinese-text">
+        
+      </p>
+      
+     
+           
+      <p class="chinese-text">
+       
+
+      </p>
+     
+     
+
+      <p class="chinese-text">
+        
+
+      </p>
+    </div>
+    <div class="card-footer">
+      <h6 class="text-center">
+      
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:news' %}">①点赞 {{topic.likes}}</a>
+          <a href="{% url 'zlapp:topic' topic.id %}">②评论{{ topic.entry_set.all|length }}</a>
+          <a href="{% url 'zlapp:news' %}">③分享{{20}}</a>
+      
+        </div>
+      
+      </h6>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <p></p>
+
+
+
+  <div class="card">
+    <div class="card-header">
+      <h6 class="chinese-text">
+        评论主题：{{ topic }}
+      </h6>
+      
+      <h6 class="text-right">评论创建日期：{{ topic.date_added }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        评论数：{{ topic.entry_set.all|length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ID：{{ topic.id }}
+      </h6>
+      
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:new_entry' topic.id  %}">我也要写评论 </a>
+        <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+      </div>
+
+
+    </div>
+
+    <div class="card-body">
+      <p class="chinese-text">
+      <ul>
+        {% for entry in topic.entry_set.all|dictsortreversed:"id"|slice:":5" %}
+        <li>
+          {% if entry.name == "" %}
+          <p> 匿名用户 IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+      
+          {% else %}
+          <p> 用户名：{{ entry.name }} IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+          {% endif %}
+      
+        </li>
+        {% empty %}
+        <li>该主题内还没有留言！留言请点击进入：</li>
+      
+        {% endfor %}
+      </ul>
+      
+      </p>
+     
+    
+
+    </div>
+
+    <div class="card-footer">
+      <h6 class="text-center">
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:new_entry' topic.id %}">我也要写评论 </a>
+          <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+        </div>
+      </h6>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}

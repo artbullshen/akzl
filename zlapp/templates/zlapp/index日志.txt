@@ -1,0 +1,60 @@
+index*.html是网站的首页，由于需要频繁修改，因此会保留不同时间的文件。
+index日志.txt主要记录首页文件的变化过程，及文件命名。
+index.html是当前使用的首页文件。
+index2029XXXX.html则是不同时间的文件。
+index-副本.html是最早保存的一份index.html。
+
+
+2026年9月10日（周四，阵雨）
+修改前的文件备份：index20260910.html
+侧面的导航栏想去掉，昨天用注释的方式（<!---->)没有作用，今天准备用删除的方式，来看看效果。删除的内容存放此处：
+
+{% block cemian1 %}
+      <ul class="nav nav-pills flex-column">      
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:zhangling1' %}">岭上岁月</a>
+        </li>
+
+         <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:sd3j1' %}">水电三局</a>
+         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:respect1' %}">致敬时代</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school' %}">子弟学校</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:other' %}">其它专题</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:features' %}">三餐四季</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:bond' %}">天南地北</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#topic_link">网站声明</a>
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      <h2></h2>
+
+
+
+{% endblock cemian1 %}
+
+
+
+
+
+2026年9月9日（周三，雨）
+修改前的文件备份：index20260909.html
+对首页进行了大幅修改：
+一、采用了四等份布局，即引用base4.html。
+二、

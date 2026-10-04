@@ -1,0 +1,33 @@
+{% extends "zlapp/base.html" %}
+
+{% block main1%}
+  <div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4>新用户注册</h4>
+        </div>
+        <div class="card-body">
+           <form action="{% url 'users:register' %}" method="post" novalidate>
+                        {% csrf_token %}
+                        {% for field in register_form %}
+                            {{ field.label_tag }}
+                            {{ field }}
+                            <p>{{ field.errors.as_text }}</p>
+                        {% endfor %}
+                        <span>{{ register_form.non_field_errors }}</span>
+                        <input type="submit" value="注册">
+
+             </form>
+
+        </div>
+        <div class="card-footer">
+            <p>
+            </p>
+        </div>
+
+
+    </div>
+
+  </div>
+{% endblock main1%} %}
+

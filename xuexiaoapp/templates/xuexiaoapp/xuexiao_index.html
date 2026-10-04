@@ -1,0 +1,130 @@
+{% extends "xuexiaoapp/base.html" %}
+
+{% block cemian %}
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'xuexiaoapp:jianjie' %}">学校简介</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">学校图集</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'xuexiaoapp:dsj' %}">学校大事记</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">名师专栏</a>
+        </li> <li class="nav-item">
+          <a class="nav-link" href="#">杰出校友</a>
+        </li>
+
+
+         <li class="nav-item">
+          <a class="nav-link" href="#">链接</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">禁用</a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-none">
+
+      <h2>关于我</h2>
+      <h5>我的照片:</h5>
+      <div class="fakeimg">这边插入图像</div>
+      <p>关于我的介绍..</p>
+
+
+
+
+{% endblock cemian %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <h2>学校的建设历史</h2>
+  <div class="card">
+    <div class="card-header">金银滩，中华民族挺起脊梁的地方</div>
+    <div class="card-body">
+    <li>在共和国的建设史上，国家重点建设工程，</li>
+
+     <p>先生产，后生活。</p>
+
+
+
+    </div>
+    <div class="card-footer">我有话要说
+
+
+    </div>
+
+  </div>
+  <p> </p>
+  <div class="card">
+    <div class="card-header">茫崖冷湖，被遗忘的石油小镇</div>
+    <div class="card-body">
+     <p>
+
+
+    </p>
+
+
+    </div>
+    <div class="card-footer">底部</div>
+  </div>
+
+  <p></p>
+  <div class="card">
+    <div class="card-header">
+      <h4>陕西安康张岭，水电三局生活基地……</h4>
+
+
+    </div>
+    <div class="card-body">
+
+    <li>
+    更多的是分布在城市周围，随着城市化建设，与城市融为一体的生活区。
+
+
+
+    </li>
+
+
+
+
+
+    </div>
+    <div class="card-footer">底部</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">创建校志网，将校志材料以网络形式呈现</div>
+    <div class="card-body">
+      <p>
+
+    考虑到网络时代的便捷及信息的通畅，创建学校校志网的目的，是想通过网络的模式，
+    让这些材料没有湮没，也以网络方式，去印证一下材料的准确性，更可以通过网络来收集材料，
+    更正校志中的不当之处。因此，特在网站中增加了校友注册的地方，以供校友发表意见、看法，
+    提供相关材料等。</p>
+    <li>这也就形成了这样的网站。</li>
+
+    <li>网站的材料源于网络、及校志编辑部，版权归汉滨初中滨江校区所有。</li>
+
+
+
+
+    </div>
+    <div class="card-footer">底部</div>
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}
+
+

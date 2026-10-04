@@ -1,0 +1,308 @@
+{% extends "zlapp/base1.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="text-center">学校的历史</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school11' %}">学校的历史：溯源</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'zlapp:school12' %}">学校的历史：辉煌和衰落</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school13' %}">学校的历史：生存和改制</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school14' %}">学校的历史：机遇和发展</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school' %}">返回学校专题首页</a>
+        </li>
+
+        
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+
+    {% for new in news %}
+      <li>{{ new.text }}   </li>
+      <p>{{ new.date_added|date:'Y年m月d日' }}</p>
+      <p>{{ new.cont|slice:"22" }}
+              {{ "..."}}
+      </p>
+
+    {% endfor %}
+
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+
+
+
+{% endblock cemian2 %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <div id="zl1">
+    <h5 class="text-center">学校的历史：辉煌和衰落</h5>
+  </div>
+  
+  <div class="card">
+    <div class="card-header">
+    <h6 class="chinese-text"> 1978年5月到2006年12月，水电三局子弟学校，从初创到辉煌，
+      再到衰落，和水电三局的命运息息相关！</h6>
+    </div>
+    <div class="card-body">
+      <p class="chinese-text">
+        学校现以1978年5月移址安康市汉滨区张岭为建设起始年，
+        学校由当时的水电四局石泉分局子弟一校和子弟二校合并成为现安康张岭的子弟学校。
+      </p>
+      
+      <p class="chinese-text">
+        1978年9月，水电十五局子弟一校于张岭正式开学。赵素珍任学校负责人。
+      </p>
+      
+      <p class="chinese-text">
+        1979年3月，俞子惠任水电十五局子弟一校党支部书记兼校长。
+      </p>
+      
+      <p class="chinese-text">
+        1979年9月，子弟一校分设为水电十五局子弟一小（小学）和水电十五局子弟中学。
+        俞子惠任中学党支部书记兼校长；赵素珍任子弟一校党支部书记，周秀华任子弟一校校长。
+      </p>
+      
+      <p class="chinese-text">
+        建校初期，俞子惠校长为学校的迁移、基本建设、师资队伍的组织等做了大量的基础性工作。
+      </p>
+      
+      <p class="chinese-text">
+        1979年10月，学校随工程局更名为电力工业部水电二局子弟一校、水电二局子弟中学。
+      </p>
+      
+      <p class="chinese-text">
+        1981年10月，工程局任命石予宜任子弟中学校长；俞子惠任党支部书记。 
+        赵素珍任子弟一校党支部书记，周秀华任子弟一校校长。
+      </p>
+
+      <p class="chinese-text">
+        1982年6月，学校随工程局更名为水利水电部水电十五局子弟中学、子弟一校。 
+        同年9月，学校又随工程局更名为水利电力部水电三局子弟中学、子弟一校。
+
+      </p>
+      <p class="chinese-text">
+        此后20多年，水电三局子弟中学和水电三局子弟一校，以及后来的水电三局子弟二校、
+        子弟三校和汉中子校，一直以各自独立的身份，
+        开展教育教学工作，并接受水电三局教育处（教育委员会）的直接领导，
+        同时也接受地方教育局的工作指导，直到2005年企业开展企业分离办社会职能的工作。
+
+      </p>
+      
+      <p class="chinese-text">
+        1980年9月学校校舍全部建成，小学和中学完成分立，各自独立开展教育教学工作，
+        学校开始步入快速发展时期。
+      </p>
+      <p class="chinese-text">        
+        随着学生人数增加，教师缺口较大，工程局从各单位招考了一批优秀青年加入教师队伍；
+        从1980年开始，每年从安康师专（现安康学院）及安康师范（现安康职业技术学院）分进一些毕业生，充实到教师队伍当中。
+        当时安康电站正处于建设的高峰期，又是计划经济，工程局对学校的建设非常重视，
+        给予大量的投入，对于教师的培养也是鼎立支持。
+      </p>
+
+      <p class="chinese-text">        
+        从1984年开始，学校进入长达9年的飞速发展时期。其中1985、1986、1987、1988
+        这四年是学校历史上最辉煌的时期，全校学生人数达历史最高，
+        1985年整个子校学生总数高达2800余人，其中初中进入学生的高峰期，
+        仅初三就有12个教学班，人数最高达534人。1988年学校教职工人数达196人，
+        是学校教职工人数最多的一年。
+      </p>
+
+      <p class="chinese-text">
+        这几年的高考成绩也给学校赢得了巨大的荣誉。1984年高考，有12人考入大学，
+        这个数目当时在安康地区位居前列；1985年高考更是奠定了三局子校在安康地区的地位，
+        共有19人考入大学，仅位居于安康中学、永红中学（现汉滨高中）及旬阳中学之后，
+        名列第四；1987年的高考成绩是这一发展阶段的高峰，有27人考入大学，
+        其中有11人考入重点大学，其风光程度可想而知。1991、1992年继续保持好成绩，
+        1991年27人考入大学，1992年24人考入大学。
+      </p>
+      <p class="chinese-text"> 
+        1988年9月，安康地区通报一九八八年高考奖励办法及受奖名单：三局中学理科第一 、 
+        文科第三；特颁奖金150元+80元，合计230元。（见图片）
+        
+      </p>
+
+      <p class="chinese-text">        
+        这一时期，三局子校无论是教师队伍、基础设施、学生数量还是高考成绩，
+        在当时的安康地区都得到了广泛认可。
+      </p>
+      <p class="chinese-text">      
+        九十年代初由于专业技术人员在社会上需求增大，
+        1991年水电三局技工学校开始招收初中生，1993年水电三局工业学校（中专）也开始招收初中生，
+        这一政策上的变化对三局子校高中的发展产生极大影响。1991年中学学生总数只有819人。
+        1992年由于小学5年学制改为6年学制，初中毕业生只有66人。
+      </p>
+      <p  class="chinese-text">
+        此后，随着安康水电站建设进入尾工，改革开放把企业推向市场经济，
+        工程局的经济景气指数开始进入了寒冬，对子弟教育的投入从原来的大手笔，
+        到当时仅能保持教育的正常运行的日常投入，三局子校开始面临巨大的生存挑战。
+      </p>
+      <p class="chinese-text">        
+        当敏感的三局人看到自己生存境况发生了转变时，危机感油然而生，
+        他们开始焦虑自己子女的学习环境，1993年拉开了三局子女进安康城区上学的大幕，
+        此后进城上学的人数逐年递增。这种环境下小学由于学生年龄较小，受影响不大，
+        而中学则走进了学生数量的最低谷，1993年中学学生总数561人，教学班仅16个。
+        初中毕业生从1992年到2000年，一直都没有超过200人，高中毕业生从1994年开始到2001年，
+        一直都没有超过100人，1995年30人，1999年仅有24人。
+      </p>
+      <p class="chinese-text">        
+        由于生源减少，高考成绩也失去往日辉煌，从1993年到1999年，长达七年高考成绩都不尽如人意，
+        群众对学校的质疑声越来越大，工程局对学校的信任度越来越低，优质生源严重流失，
+        学校面临巨大的挑战。
+      </p>
+      <p class="chinese-text"> 
+        而同一时期，安康市的高中教育则呈现出飞速发展的态势，安康中学、汉滨高中、
+        旬阳中学等学校的高考成绩屡创新高，本科上线人数达百人以上，更是吸引了大量优秀生源。
+      </p>
+      <p class="chinese-text">        
+        2000年开始，学校的状况有所改观，学生开始增加，班级开始增多，
+        高考成绩在5年里连续不断进步，考取大学的人数每年都在刷新。
+        尤其是在2000年三局学校的学生周睿走进了清华大学的圣殿，全工程局沸腾。
+        在2002年中考中，我校初中毕业生陆春晖考取了安康市第一的好成绩，
+        再次让学校挺起了腰杆。
+        
+      </p>
+      
+           
+      
+     
+           
+      <p class="chinese-text">
+       
+
+      </p>
+     
+     
+
+      <p class="chinese-text">
+        
+
+      </p>
+    </div>
+    <div class="card-footer">
+      <h6 class="text-center">
+      
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:news' %}">①点赞 {{topic.likes}}</a>
+          <a href="{% url 'zlapp:topic' topic.id %}">②评论{{ topic.entry_set.all|length }}</a>
+          <a href="{% url 'zlapp:news' %}">③分享{{20}}</a>
+      
+        </div>
+      
+      </h6>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <p></p>
+
+
+
+  <div class="card">
+    <div class="card-header">
+      <h6 class="chinese-text">
+        评论主题：{{ topic }}
+      </h6>
+      
+      <h6 class="text-right">评论创建日期：{{ topic.date_added }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        评论数：{{ topic.entry_set.all|length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ID：{{ topic.id }}
+      </h6>
+      
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:new_entry' topic.id  %}">我也要写评论 </a>
+        <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+      </div>
+
+
+    </div>
+
+    <div class="card-body">
+      <p class="chinese-text">
+      <ul>
+        {% for entry in topic.entry_set.all|dictsortreversed:"id"|slice:":5" %}
+        <li>
+          {% if entry.name == "" %}
+          <p> 匿名用户 IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+      
+          {% else %}
+          <p> 用户名：{{ entry.name }} IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+          {% endif %}
+      
+        </li>
+        {% empty %}
+        <li>该主题内还没有留言！留言请点击进入：</li>
+      
+        {% endfor %}
+      </ul>
+      
+      </p>
+     
+    
+
+    </div>
+
+    <div class="card-footer">
+      <h6 class="text-center">
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:new_entry' topic.id %}">我也要写评论 </a>
+          <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+        </div>
+      </h6>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}

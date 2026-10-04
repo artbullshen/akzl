@@ -1,0 +1,48 @@
+{% extends "bjxzapp/base.html" %}
+
+{% block cemian %}
+ <h5>我的评论</h5>
+
+  <ul>
+    {% for pinlun in pinluns %}
+      <li>{{ pinlun }}</li>
+    {% empty %}
+      </li>No topics have been added yet.</li>
+    {% endfor %}
+
+  </ul>
+
+
+
+
+{% endblock cemian %}
+
+
+
+
+
+{% block main1 %}
+
+  <p>我的主题</p>
+
+  <ul>
+    {% for topic in topics %}
+      <li>
+        <a href="{% url 'bjxzapp:topic' topic.id %}">{{ topic }}</a>
+      </li>
+    {% empty %}
+      </li>No topics have been added yet.</li>
+    {% endfor %}
+
+  </ul>
+
+  <h5>
+    <a href="{% url 'bjxzapp:new_topic' %}">添加新主题</a>
+  </h5>
+
+
+
+
+
+
+{% endblock main1 %}

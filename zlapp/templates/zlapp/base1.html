@@ -1,0 +1,283 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>岭上岁月</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+    shrink-to fit=no">
+
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+
+
+  <style>
+  .bg-img {
+      background-image: url("{% static 'images/zlapp/1zl/zl1.jpg' %}") ;
+      background-size:cover; /* 图片覆盖整个容器 */
+      background-position:no-repeat center center;
+      color:yellow;
+      font-family:"宋体";
+  }
+  .fakeimg {
+      height: 200px;
+      background: #aaa;
+  }
+  .chinese-text {
+      text-indent:2em;
+  }
+
+  .h.jumbotron{
+    padding:30px;
+
+  h6{
+    padding-top:5px;
+   }
+  .a{
+    width:80px;
+    height:20px;
+    text-align:center;
+    line-height:20px;
+    color:#fff;
+   }
+
+  .p-margin{
+    margin:0 auto;
+  }
+
+  </style>
+</head>
+
+
+<body>
+
+<div class="bg-img jumbotron text-center " style="margin-bottom:0">
+
+  <h6>张岭，位于陕西省安康市汉滨区汉江大桥的北岸。</h6
+  <h6>1976年以前，这里还是一片荒芜之地。</h6>
+  <p>1977年安康水电站进行开工准备工作，上万人的施工队伍及家属，
+  便临时安置在与安康县城一桥之隔，这个叫张岭的山包包上。</p>
+  <h5>谁曾想，这份“临时”最终酿成了“永久”。</h5>
+  <p></p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+  <a class="navbar-brand" href="{% url 'zlapp:index' %}">首页</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'zlapp:zhangling1' %}">岭上岁月</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'zlapp:sd3j1' %}">水电三局</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'zlapp:respect1' %}">致敬时代</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'zlapp:school' %}">子弟学校</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'zlapp:features' %}">三餐四季</a>
+      </li>
+
+
+
+    </ul>
+
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <span class="navbar-text">
+          {% if user.is_authenticated %}
+            您好！{{ user.username }} , 欢迎访问本站！
+            <a href="{% url 'users:logout' %}">注销</a>
+          {% else %}
+            <a href="{% url 'users:login' %}">登录</a>
+            <a href="#">注册</a>
+
+          {% endif %}
+
+
+
+        </span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'zlapp:topics' %}">网友留言</a>
+      </li>
+    </ul>
+
+
+
+
+  </div>
+
+
+</nav>
+
+<div class="container" style="margin-top:30px">
+  <div class="row no-gutters">
+    <div class="col-sm-3">
+
+      <div class="card">
+        <div class="card-body">
+          {% block cemian1 %}
+          {% endblock cemian1 %}
+        </div>
+      </div>
+      <p></p>
+
+
+
+      <p></p>
+      <div class="card">
+        <div class="card-header">
+          <p class="text-center">张岭老照片</p>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel" data-bs-interval="10000">
+            <!--轮播（Carousel）指标-->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <!--轮播（Carousel）项目-->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'images/zlapp/1zl/zl1.jpg' %}" width="500" height="240" alt="zl1">
+                <div class="carousel-caption">从江南北望张岭</div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/zlapp/1zl/zl3.jpg' %}" width="500" height="240" alt="zl3">
+                <div class="carousel-caption">张岭的早晨</div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/zlapp/1zl/zl4.jpg' %}" width="500" height="240" alt="zl4">
+                <div class="carousel-caption">张岭工人俱乐部</div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/zlapp/1zl/zl7.jpg' %}" width="500" height="240" alt="zl7">
+                <div class="carousel-caption">职工子弟中学</div>
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/zlapp/1zl/zl6.jpg' %}" width="500" height="240" alt="zl6">
+                <div class="carousel-caption">建设中的张岭</div>
+              </div>
+
+            </div>
+            <!--轮播（Carousel）导航-->
+
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+        <!--
+        <div class="card-body">
+
+
+          <video width="220"  controls>
+            <source src="{% static 'videos/zlapp/20260330.mp4' %}" type="video/mp4">
+            <p class="text-center">汉阴漩涡镇凤堰古梯田</p>
+
+          </video>
+
+        </div>
+        <div class="card-footer">更多信息</div>
+        -->
+
+      </div>
+      <p></p>
+      <div class="card">
+
+        {% block cemian2 %}
+        {% endblock cemian2 %}
+
+      </div>
+
+    </div>
+
+
+    <div class="col-sm-9">
+      {% block main1 %}
+      {% endblock main1 %}
+
+
+     {% block main2 %}
+     {% endblock main2 %}
+
+    </div>
+
+    <!--
+    <div class="col-sm-2">
+      <div class="card">
+        {% block yiche %}
+
+        {% endblock yiche %}
+
+
+        <div class="card-header">
+          <p>测试右边框</p>
+        </div>
+        <div class="card-body">
+          <p> 测试内容</p>
+        </div>
+        <div class="card-footer">
+          <p>底部</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    -->
+
+
+
+  </div>
+</div>
+
+
+<div class="h jumbotron text-center" style="margin-bottom:0">
+  <p>联系我们</p>
+  <span class="link">
+    <a href="mailto:akzledit@163.com">网站编辑</a> |
+    <a href="mailto:277757418@qq.com">校友联系</a> |
+    <a href="javascript:void(0)">注册</a>
+  </span>
+  <p class="bottom-content">
+    <span>地址：陕西安康汉滨区水电大街  </span>
+    <span>邮箱: 277757418@qq.com</span>
+  <br>
+  Copyright &copy《岭上风景》网. All Rights Reserved
+  </p>
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+{% extends "zlapp/base1.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="text-center">学校大事记</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link disabled href="#">大事记的编写原则</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school21' %}">1978年以前</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school22' %}">1978年5月-1981年10月</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'zlapp:school23' %}">1981年10月-1996年9月</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school24' %}">1996年9月-2004年8月</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="#">2004年8月-2006年12月</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">2006年12月-2017年8月</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">2017年8月-2020年8月</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">2020年8月以后</a>
+        </li>
+
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school' %}">返回学校专题主页</a>
+        </li>
+
+        
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+
+    {% for new in news %}
+      <li>{{ new.text }}   </li>
+      <p>{{ new.date_added|date:'Y年m月d日' }}</p>
+      <p>{{ new.cont|slice:"22" }}
+              {{ "..."}}
+      </p>
+
+    {% endfor %}
+
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+
+
+
+{% endblock cemian2 %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <div id="zl1">
+    <h5 class="text-center">汉滨初中滨江校区大事记（讨论稿）（2023年3月定稿）</h5>
+  </div>
+  <p> </p>
+  
+  <div class="card">
+    <div class="card-header">
+      <h5 class="chinese-text">1981年10月-1996年9月</h5>
+    </div>
+    <div class="card-body">
+      <li>1981年10月，工程局任命石予宜任子弟中学校长；俞子惠任党支部书记。
+        赵素珍任子弟一校党支部书记，周秀华任子弟一校校长。</li>
+      <li>1982年6月，学校随工程局更名为水利水电部水电十五局子弟中学、子弟一校。
+        同年9月，学校又随工程局更名为水利电力部三局子弟中学、子弟一校。</li>
+      <li>1983年，水电三局子弟一校被授为陕西省“五讲四美”先进集体。</li>
+      <li>1983年8月6日，陕西省省长李庆伟到子弟中学救灾站慰问灾民和参与救灾工作的学校教师。</li>
+      <li>1983年8月8日，陕西省委第一书记马文瑞到子弟中学救灾站慰问灾民和参与救灾工作的学校教师。</li>
+      <li>1984年7月，子弟中学女子足球队代表安康地区参加陕西省女子足球赛获得第三名；教练：易武、牟正玲、
+        刘绍波老师。</li>
+      <li>1984年9月，吴建英（男）同学被清华大学电子工程系录取。</li>
+      <li>1986年9月，三局子弟中学职业高中部招生。（1990年停办）。</li>
+      <li>1987年8月，子弟中学牟正玲、胡勇老师率女子毽球队在西安参加比赛获陕西省冠军。
+        同年11月在重庆代表陕西省参加全国凤凰杯毽球比赛，（因为没有分组别，
+        成人队和青少年队在一起比赛。）获得第13名。</li>
+      <li>1987年高考，在安康地市十四所省地重点中学中，三局中学高考平均成绩名列第一。</li>
+      <li>1987年9月，张靖（男）同学被北京大学力学系录取。</li>
+      <li>1988年6月，学校随工程局更名为能源部水电三局子弟一校、子弟中学；
+        10月学校又随工程局更名为“中国水利水电第三工程局（简称水电三局）”子弟一校、子弟中学。</li>
+      <li>1988年9月，安康地区通报一九八八年高考奖励办法及受奖名单：三局中学理科第一 、 文科第三；
+        奖金150元+80元，合计230元。</li>
+      <li>1988年12月7曰至11日，西北电管局子校“第二课堂”经验交流会在水电三局教育处举行。
+        来自陕西电力系统十六所子弟学校的代表以及西北电管局教育处、安康地区文教局、
+        安康市（汉滨区）文教局参加了交流会。三局中学在会上交流经验。</li>
+      <li>1989年5月，殷亿芬老师被评为陕西省优秀少先队辅导员。</li>
+      <li>1989年11月，孙吉友、尹海泉老师率子弟中学足球队参加安康地区第三届“振兴杯”，获中学组冠军。</li>
+      <li> 年 月，三局中学田径队一名学生在全国传统项目田径分区赛上夺得女子跳高第二名。</li>
+      <li>1990年3月，虞爱梅任子弟一校校长。</li>
+      <li>1990年6月，子弟一校被陕西少工委命名为省级“文明大队”。</li>
+      <li>1990年6月，子弟一校被国家少工委命名为全国“红旗大队”。兰新华老师被评为全国“优秀中队辅导员”。</li>
+      <li>1990年7月，殷亿芬任子弟一校校长。</li>
+      <li>1990年12月12日，为庆祝安康水电站胜利发电，徐德胜作词、张兰喜作曲、
+        指挥的大型组歌《峡谷的回声（水电工人之歌）》在张岭影剧院隆重演出。</li>
+      <li>1990年６月，魏黎阳、陈淑君、贾磊、王宁被评为陕西省优秀少先队员；
+        初二（1）班被陕西省和全国少工委授予优秀中队的称号。
+        董风岐老师被共青团陕西省委、省教委、省少工评为最佳指导教师，
+        同时还被团中央《辅导员》杂志杜评为优秀教师。</li>
+      <li>1991年6月，董凤岐老师被评为陕西省学赖宁活动最佳支持者。10月魏黎阳同学荣获全国学赖宁奖章；
+        董凤岐老师被评为全国学赖宁活动优秀指导者。</li>
+      <li>1991年，全国物理化学单科联赛，三局中学高三学生汪韬获安康地区物理第二名、化学二等奖；
+        何晓阳获化学三等奖。</li>
+      <li>1991年（？），刘沛同学参加陕西省第三届运动会获得五十米仰泳、自由泳银、铜牌各一枚。</li>
+      <li>1991年高考，三局中学63名学生考入大中专，这个战绩名列安康市（汉滨区）第一，
+        安康地区13所重点中学中的第三。</li>
+      <li>1991年9月，三局中学制定了《水电三局中学三年发展规划》即“132希望工程”。
+        响亮地提出了，抓一（高一、初一）宝。保三，高三初三，促二（高二初二）的口号。
+        三年发展规划共分为30条，其总体目标是，全面贯彻党的教育方针，实现“132希望工程”，
+        为水电建设事业培养合格的后备人才，为国家输送更多更好的专业人才，
+        力争使三局中学成为水电系统较有名气的学校。</li>
+      <li>1991年10月，三局子弟中学以928分（满分1000）的成绩被评为能源部电力系统A级学校。</li>
+      <li>1991年10月，南隧道老师被评为陕西省先进教师。</li>
+      <li>1993年5月，水电三局子弟中小学开展“文明班”评比。此项活动由“申报、验收、评比、表彰”一系列环节组成。
+        此后，便成为学校班级管理的重要载体。</li>
+      <li>1993年11月，徐德胜老师《我们该怎样务本——93高考六省市语文卷的启示》获陕甘新鄂豫皖语文研究会论文评比一等奖并发表于
+        《中学语文》。这是学校第一篇公开发表于专业刊物上的教研文章。</li>
+      <li>1994年3月8日，国家教委体卫司李华处长在省教委、地区教育局领导同志陪同下到三局中学考察体育卫生工作。
+        3月10日，李华同志又特别邀请三局教育处副处长、三局中学第一副校长曹宪宏参加安康地区教育局为其组织的座谈会。</li>
+      <li>1995年3月，肖庆国老师荣获全国青少年"祖国万岁"读书教育活动优秀指导奖。
+        此活动由中国关心下一代工作委员会、中国儿童发展中心、国家教委关心下一代工作委员会、
+        中国少年先锋队全国工作委员会、中国青年出版社、新华书店首都发行所等六家单位主办。</li>
+      <li>1995年5月，徐德胜老师的论文《作文与发散思维》在全国中语会苏鲁豫皖语文教学研究中心第十一届年会上荣获一等奖。</li>
+      <li>1996年5月，子弟一校荣获由国家教委颁发的全国青少年读书教育活动组织金奖。</li>
+      
+     
+     
+
+      <p class="chinese-text">
+
+      </p>
+    </div>
+    <div class="card-footer">
+      <h6 class="text-center">
+      
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:news' %}">①点赞 {{topic.likes}}</a>
+          <a href="{% url 'zlapp:topic' topic.id %}">②评论{{ topic.entry_set.all|length }}</a>
+          <a href="{% url 'zlapp:news' %}">③分享{{20}}</a>
+      
+        </div>
+      
+      </h6>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <p></p>
+
+
+
+  <div class="card">
+    <div class="card-header">
+      <h6 class="chinese-text">
+        评论主题：{{ topic }}
+      </h6>
+      
+      <h6 class="text-right">评论创建日期：{{ topic.date_added }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        评论数：{{ topic.entry_set.all|length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ID：{{ topic.id }}
+      </h6>
+      
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:new_entry' topic.id  %}">我也要写评论 </a>
+        <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+      </div>
+
+
+    </div>
+
+    <div class="card-body">
+      <p class="chinese-text">
+      <ul>
+        {% for entry in topic.entry_set.all|dictsortreversed:"id"|slice:":5" %}
+        <li>
+          {% if entry.name == "" %}
+          <p> 匿名用户 IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+      
+          {% else %}
+          <p> 用户名：{{ entry.name }} IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+          {% endif %}
+      
+        </li>
+        {% empty %}
+        <li>该主题内还没有留言！留言请点击进入：</li>
+      
+        {% endfor %}
+      </ul>
+      
+      </p>
+     
+    
+
+    </div>
+
+    <div class="card-footer">
+      <h6 class="text-center">
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:new_entry' topic.id %}">我也要写评论 </a>
+          <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+        </div>
+      </h6>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}

@@ -1,0 +1,288 @@
+{% extends "zlapp/base1.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="text-center">致敬时代</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:respect1' %}">回望与守护</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:respect2' %}">三线建设</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'zlapp:respect3' %}">苍凉的青海冷湖</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:respect4' %}">蜕变的北京798</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:respect5' %}">永恒的青海221</a>
+        </li>
+
+         
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:respect6' %}">主角的拍摄地：西安风雷</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:respect7' %}">蝶变的北京绿心公园</a>
+        </li>
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+
+    {% for new in news %}
+      <li>{{ new.text }}   </li>
+      <p>{{ new.date_added|date:'Y年m月d日' }}</p>
+      <p>{{ new.cont|slice:"22" }}
+              {{ "..."}}
+      </p>
+
+    {% endfor %}
+
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+
+
+
+{% endblock cemian2 %}
+
+
+
+{% block main1 %}
+
+<div class="container">
+  <div id="zl1">
+    <h5 class="text-center">致敬时代：苍凉的青海冷湖！</h5>
+  </div>
+  
+
+  <p></p>
+
+ 
+  <p></p>
+
+  <div class="card">
+    <div class="card-header">
+    <h6 class="chinese-text">在柴达木盆地，阿尔金山脚下无垠的荒漠中有一个废弃的石油小镇，
+    它曾因石油而繁荣，又因石油而衰败，这就是茫崖冷湖镇，第一代石油工人挥洒热血的地方。
+    茫崖冷湖，被遗忘的石油小镇。  </h6>
+    </div>
+
+
+    <div class="card-body">
+
+      <p class="chinese-text">
+               
+      </p>
+    
+
+      <p class="chinese-text">
+        茫崖市冷湖镇，曾经的冷湖市（县级市）、冷湖行政区，距茫崖市政府所在地花土沟镇300公里。
+        距俄博梁火星营地65公里，距黑独山胭脂山景区11公里，距敦煌市250公里。1954年发现石油后开始建设。
+                
+      </p>
+  
+      <p class="chinese-text">        
+        1955年，地质队在柴达木盆地北缘发现了一个淡水湖，湖水很凉，于是就称其所在地为冷湖。
+        接下来，成千上万的石油工人怀揣“我为祖国献石油”的理想与抱负，
+        从祖国的四面八方来到冷湖，在荒漠中建立了石油小镇。
+        在石油开采鼎盛、冷湖最繁华的时候，有十几万人在这里工作和生活。
+      </p>
+      
+      <p class="chinese-text">
+        20世纪60年代后，随着国家石油发展战略东移和油田原油产量逐年递减，
+        冷湖油田陷入开发低谷。
+      </p>
+      
+      <p class="chinese-text">
+        20世纪70年代，随着
+        
+        随着石油资源的枯竭，冷湖油田进入停产阶段，油田的开发逐渐停止。
+        
+             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;90年代开始，石油作业区移至西距冷湖300公里的茫崖。
+        而青海石油管理局机关及近3万名职工家属，从远离后勤支持和社会依托的海拔2600多米高原，
+        整体搬迁至250公里外的甘肃省敦煌市七里镇。
+        
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;冷湖镇，这个曾有数万人的石油小镇，如今却到处是沙埋下的断壁残垣，看不到当年生机勃勃的景象，
+        嗅不出当年生活工作的气息。
+        <br>在石油开采鼎盛的时候，冷湖最繁华期这里有十几万人，
+        分散在老基地、水源、四号基地和五号基地以及标志性油井地中四井。
+        目前，冷湖四号基地尚有一些地方单位和一个石油留守处，而冷湖老基地和五号基地已成废墟。
+        <br>曾经这里充盈着石油儿女几万人几代人的身影，如今这里只有掠过戈壁的风，
+        残破的墙壁上的毛主席语录，恍如隔世。老基地的残墙上，留下许多冷湖人千里重返的印记。
+        <br>从无人区到数万人居住的繁荣小镇，如今又回归到无人区，绕了一个圈又回到原点。
+        </p>
+        <img src="{% static 'images/zlapp/lh.jpg' %}" width="760" height="600">
+        <p class="text-center">图片由燕提供（2025年9月拍摄） </p>
+       
+         
+      </p>
+        
+      <p class="chinese-text">
+        整齐划一的废墟，从废墟规模之大，可以遥想当年的辉煌。
+        <br>在废墟原址的不远处，还有一座“现代化”的冷湖小镇。镇里设施齐全，大型体育馆，大型商场，
+        巨大的政府办公大楼，都粉刷维护得崭新。街道干净整洁，几乎每隔10米就有一个监控摄像头。
+        密集的道路绿化在荒漠中格外扎眼。
+        <br>然而，街道上，没有人。那些大型建筑，里面全是空的。
+        偌大的学校里空无一人，室内的桌椅板凳都残破布满灰尘。
+        
+      </p>
+      
+     
+           
+      <p class="chinese-text">
+        致敬
+        在这个地球上跟月球一样的地方，在这个干部和工人一样的地方，在这个女人和男人一样的地方，
+        他们在地下找出了石油，他们在戈壁建立了城镇，他们在这里安营扎寨，在这里生儿育女，
+        他们在这里活着，他们在这里死去……
+
+      </p>
+     
+     
+
+      <p class="chinese-text">
+        茫（máng）崖（ái）蒙古语意为“额头”。
+        茫崖市是青海省海西蒙古族藏族自治州下辖的一个县级市，位于柴达木盆地西北边缘，
+        地处青海省西北边陲。茫崖市是由茫崖行政委员会和冷湖行政委员会撤销后，合并设立的县级市，
+        2018年12月挂牌成立，是全国最年轻的城市之一。
+        全市总面积约为4.99万平方千米，平均海拔为3000米，属典型的高原大陆性气候。
+        茫崖市辖花土沟镇、冷湖镇、茫崖镇，共有3个牧业村和9个社区，总人口7.5万人，
+        其中户籍人口5.4万人，流动人口2.1万人，绝大部分是城镇居民和矿区职工，牧民108户321人。
+        
+        <img src="{% static 'images/zlapp/my.jpg' %}" width="760" height="600">
+        <p>图片由阿特牛提供（2025年9月拍摄） </p>
+
+
+
+        由于茫崖特殊的地理位置和恶劣的生存环境，常被人戏称为“地球上最不像地球的地方”和“最孤独的城市”。
+        茫崖市被称为“中国最孤独的城市”，主要的原因是“地理位置偏”，茫崖市位于青海省的最西端，
+        地处地广人稀的柴达木盆地，周边350千米范围内没有其他城市，距离最近的城市是甘肃省的敦煌市，
+        距离超过390千米以上。地理空间位置，确定茫崖市周围数百千米范围内没有同类城市。
+        此外，茫崖市四周被可可西里无人区、阿尔金山无人区和罗布泊无人区等环绕，也凸显了茫崖市的孤单。
+
+        
+
+      </p>
+
+
+
+
+    </div>
+    <div class="card-footer">
+      <h6 class="text-center">
+      
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:news' %}">①点赞 {{topic.likes}}</a>
+          <a href="{% url 'zlapp:topic' topic.id %}">②评论{{ topic.entry_set.all|length }}</a>
+          <a href="{% url 'zlapp:news' %}">③分享{{20}}</a>
+      
+        </div>
+      
+      </h6>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <p></p>
+
+
+
+  <div class="card">
+    <div class="card-header">
+      <h6 class="chinese-text">
+        评论主题：{{ topic }}
+      </h6>
+      
+      <h6 class="text-right">评论创建日期：{{ topic.date_added }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        评论数：{{ topic.entry_set.all|length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ID：{{ topic.id }}
+      </h6>
+      
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:new_entry' topic.id  %}">我也要写评论 </a>
+        <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+      </div>
+
+
+    </div>
+
+    <div class="card-body">
+      <p class="chinese-text">
+      <ul>
+        {% for entry in topic.entry_set.all|dictsortreversed:"id"|slice:":5" %}
+        <li>
+          {% if entry.name == "" %}
+          <p> 匿名用户 IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+      
+          {% else %}
+          <p> 用户名：{{ entry.name }} IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
+          <p>{{ entry.text }} </p>
+          {% endif %}
+      
+        </li>
+        {% empty %}
+        <li>该主题内还没有留言！留言请点击进入：</li>
+      
+        {% endfor %}
+      </ul>
+      
+      </p>
+     
+    
+
+    </div>
+
+    <div class="card-footer">
+      <h6 class="text-center">
+        <div class="row justify-content-around bg-light ">
+          <a href="{% url 'zlapp:new_entry' topic.id %}">我也要写评论 </a>
+          <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
+        </div>
+      </h6>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+</p>
+
+{% endblock main1 %}

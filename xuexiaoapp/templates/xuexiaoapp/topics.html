@@ -1,0 +1,17 @@
+{% extends "xuexiaoapp/base.html" %}
+
+{% block content %}
+
+  <p>网友评论</p>
+
+  <ul>
+    {% for topic in topics %}
+      <li>{{ topic }}</li>
+    {% empty %}
+      <li>还没有任何评论！</li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}
+
+

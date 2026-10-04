@@ -1,0 +1,45 @@
+{% extends "bjxzapp/base.html" %}
+
+{% block cemian %}
+  <p>我的主题 </p>
+
+  <ul>
+    {% for topic in topics %}
+
+       <li><a href="{% url 'bjxzapp:topic' topic.id %}">{{ topic }}</a></li>
+
+    {% empty %}
+      </li>No topics have been added yet.</li>
+    {% endfor %}
+
+  </ul>
+
+
+{% endblock cemian %}
+
+
+
+
+
+{% block main1 %}
+
+  <h3>所编辑条目的主题内容:
+    <a href="{% url 'bjxzapp:topic' topic.id %}">{{ topic }}</a>
+  </h3>
+  <h5>
+    编辑条目：
+  </h5>
+
+  <form action="{% url 'bjxzapp:edit_enntry' enntry.id %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">保存修改后的条目</button>
+  </form>
+
+
+
+{% endblock main1 %}
+
+
+
+
