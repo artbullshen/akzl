@@ -83,7 +83,7 @@ else:
 INSTALLED_APPS = [
     # 我的应用程序
     'zlapp',
-    'xuexiaoapp',
+    # 'xuexiaoapp',
     'users',
 
     # 第三方应用程序

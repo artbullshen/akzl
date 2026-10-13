@@ -20,6 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
     path('', include('zlapp.urls')),
-    path('xuexiaoapp/', include('xuexiaoapp.urls')),
+    # path('xuexiaoapp/', include('xuexiaoapp.urls')),
 
 ]
