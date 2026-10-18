@@ -21,13 +21,13 @@
         </li> <li class="nav-item">
           <a class="nav-link" href="{% url 'zlapp:index' %}">返回首页</a>
         </li>
-        
+
       </ul>
 
 
       <hr class="d-sm-none">
 
-      
+
 
 
 
@@ -70,7 +70,7 @@
   <div id="zl1">
     <h5 class="text-center">岭上岁月：城市更新，老城涅槃，即将变身工业记忆。</h5>
   </div>
-  
+
   <p></p>
 
   <p> </p>
@@ -91,7 +91,7 @@
         有的人下海创业或者调离三局；水电大街上更多的是老人和陌生的面孔，
         少了朝气蓬勃的年轻人，少了熟人热切的问候，少了往日的生机和活力，
         张岭基地烟火气淡了很多。
-          
+
       </p>
 
       <p class="chinese-text">
@@ -103,13 +103,13 @@
         成为汉滨区教育局直属12年制学校，并更名为“滨江学校”。此后，水电三局公安处、幼儿园、职工医院等单位也相继移交或改制，
       </p>
       <img src="{% static 'images/zlapp/1zl/zl18.jpg' %}" alt="zl18"  class="img-fluid">
-      
+
       <p class="text-center">子弟学校移交后更名为滨江学校，现已拆除重建</p>
 
 
 
 
-      <p class="chinese-text">        
+      <p class="chinese-text">
         但是，此时的张岭基地老旧房屋破败不堪、基础设施落后。
       </p>
 
@@ -129,7 +129,7 @@
       <img src="{% static 'images/zlapp/1zl/zl15.jpg' %}" alt="zl15" class="img-fluid">
       <p class="text-center">改造后的张岭基地，焕然一新</p>
 
-      <p class="chinese-text"> 
+      <p class="chinese-text">
         鑫洲家园、山水岭居、洺悦府等新小区的开盘，也大大改善了张岭人民的居住条件，
         借着文创东风，张岭基地旧貌换新颜了。
       </p>
@@ -138,7 +138,7 @@
         安装了供居民休息的长条木椅；旧楼房楼道的墙面进行了粉刷，有的楼房外墙面还描绘了色彩鲜艳的图画；
         坑洼不平的道路修好了，路灯也明亮起来了。
       </p>
-      <img src="{% static 'images/zlapp/1zl/zl16.jpg' %}" alt="zl16" class="img-fluid">
+      <img src="{% static 'images/zlapp/1zl/zl16.webp' %}" alt="zl16" class="img-fluid">
       <p class="text-center">改造后的张岭基地宣传墙</p>
 
 
@@ -175,7 +175,7 @@
       <p class="chinese-text">
        《规划》提出在黄沟张岭片区内构建形成张岭公园、汉江大桥等多个景观节点。
       </p>
-      <img src="{% static 'images/zlapp/1zl/zl17.jpg' %}" alt="zl17" class="img-fluid">
+      <img src="{% static 'images/zlapp/1zl/zl17.webp' %}" alt="zl17" class="img-fluid">
       <p class="text-center">张岭片区的规划图</p>
 
 
@@ -187,22 +187,22 @@
       <p class="chinese-text">
         城市更新，老城涅槃，张岭即将变身工业记忆。
       </p>
-      
-        
+
+
 
 
 
     </div>
     <div class="card-footer">
       <h6 class="text-center">
-            
+
         <div class="row justify-content-around bg-light ">
           <a href="{% url 'zlapp:news' %}">①点赞 {{topic.likes}}</a>
           <a href="{% url 'zlapp:topic' topic.id %}">②评论{{ topic.entry_set.all|length }}</a>
           <a href="{% url 'zlapp:news' %}">③分享{{20}}</a>
-      
+
         </div>
-      
+
       </h6>
 
 
@@ -230,12 +230,12 @@
     <h6 class="chinese-text">
       评论主题：{{ topic }}
     </h6>
-    
+
     <h6 class="text-right">评论创建日期：{{ topic.date_added }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       评论数：{{ topic.entry_set.all|length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       ID：{{ topic.id }}
     </h6>
-    
+
     <div class="row justify-content-around bg-light ">
       <a href="{% url 'zlapp:new_entry' topic.id  %}">我也要写评论 </a>
       <a href="{% url 'zlapp:topic' topic.id %}">查看全部评论</a>
@@ -252,21 +252,21 @@
           {% if entry.name == "" %}
             <p> 匿名用户 IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
             <p>{{ entry.text }} </p>
-      
+
           {% else %}
             <p> 用户名：{{ entry.name }} IP：{{ entry.ip }} 日期：{{ entry.date_added }}</p>
             <p>{{ entry.text }} </p>
-          {% endif %}   
-            
+          {% endif %}
+
         </li>
         {% empty %}
         <li>该主题内还没有留言！留言请点击进入：</li>
-      
+
         {% endfor %}
       </ul>
-      
+
       </p>
-    
+
 
     </div>
 

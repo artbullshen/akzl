@@ -18,6 +18,10 @@ urlpatterns = [
     # 水电三局部分
     path('sd3j1/', views.sd3j1, name='sd3j1'),
     path('sd3j2/', views.sd3j2, name='sd3j2'),
+    path('sd3j3/', views.sd3j3, name='sd3j3'),
+    path('sd3j4/', views.sd3j4, name='sd3j4'),
+
+
    
 
     # 学校专题部分

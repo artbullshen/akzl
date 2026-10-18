@@ -69,6 +69,27 @@ def sd3j2(request):
 
     return render(request, 'zlapp/sd3j2.html', context)
 
+def sd3j3(request):
+    """水电三局3：石泉水电站"""
+    topic = Topic.objects.get(id=8)
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news, 'topic':topic}
+
+    return render(request, 'zlapp/sd3j3.html', context)
+
+def sd3j4(request):
+    """水电三局4：石门水库"""
+    topic = Topic.objects.get(id=8)
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news, 'topic':topic}
+
+    return render(request, 'zlapp/sd3j4.html', context)
+
+
+
+
+
+
 @login_required
 def school(request):
     """学校专题"""
