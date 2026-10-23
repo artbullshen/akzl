@@ -52,6 +52,8 @@ urlpatterns = [
     path('respect5/', views.respect5, name='respect5'),
     path('respect6/', views.respect6, name='respect6'),
     path('respect7/', views.respect7, name='respect7'),
+    path('respect8/', views.respect8, name='respect8'),
+    
 
     # 其它专题部分
     path('other/', views.other, name='other'),

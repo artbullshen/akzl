@@ -231,6 +231,15 @@ def respect7(request):
     context = {'news':news, 'topic':topic}
     return render(request, 'zlapp/respect7.html', context)
 
+def respect8(request):
+    """致敬时代8：三线建设"""
+    topic = Topic.objects.get(id=16)
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news, 'topic':topic}
+    return render(request, 'zlapp/respect8.html', context)
+
+
+
 def other(request):
     """其他专题"""
     
