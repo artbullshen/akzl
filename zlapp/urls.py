@@ -35,15 +35,9 @@ urlpatterns = [
     path('school22/', views.school22, name='school22'),
     path('school23/', views.school23, name='school23'),
     path('school24/', views.school24, name='school24'),
-
-    
-
-    
-           
-
-    
-    
-    
+    path('school31/', views.school31, name='school31'),
+    path('school41/', views.school41, name='school41'),
+      
     # 致敬时代部分
     path('respect1/', views.respect1, name='respect1'),
     path('respect2/', views.respect2, name='respect2'),

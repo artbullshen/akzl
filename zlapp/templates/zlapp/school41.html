@@ -1,0 +1,689 @@
+{% extends "zlapp/base4.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="text-center">滨江学校</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school11' %}">滨江学校历史</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school21' %}">滨江学校大事记</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school31' %}">滨江学校影响力教师</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school41' %}">滨江学校励志校友</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">子弟学校历史图集</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#shuoming">水电三局教育处</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:index' %}">返回首页</a>
+        </li>
+       
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+{% endblock cemian2 %}
+
+{% block main1 %}
+  <div class="card">
+    <div class="card-header">
+      <h5 class="text-center">滨江学校励志校友</h5>
+      <p class="text-center">点击姓名可显示更详细内容</p>
+    </div>
+
+    <div class="card-body">      
+      <div class="row justify-content-around bg-light ">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#xiao1">
+          <h5 >虞爱梅</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#xiao2">
+          <h5 >冯&emsp;峰</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#xiao3">
+          <h5 >邹淑华</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#xiao4">
+          <h5 >王金秀</h5>
+        </button>        
+      </div>
+      <p></p>
+      <div class="row justify-content-around bg-light ">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#xiao5">
+          <h5 >田景光</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#xiao6">
+          <h5 >孟雅琴</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#xiao7">
+          <h5 >朱吟萍</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#xiao8">
+          <h5 >高&emsp;蕊</h5>
+        </button>
+        
+      </div>
+      
+      <!-- 模态框1 -->
+      <div class="modal fade" id="xiao1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：虞爱梅
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/x1.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="虞爱梅">
+              <p class="chinese-text">
+                虞爱梅，女，汉族，1943年2月出生，籍贯浙江宁波，中共党员，小学高级教师。
+                1962年7月毕业于宁波师范学校。1971年7月调入本校。创校元老。历任小学教导处主任，
+                副校长，校长。
+              </p>
+              <p class="chinese-text">
+                从事教育工作以来，主要担任小学语文、数学教学。教学工作和班主任工作深得同行、
+                家长和学生好评。进入管理层后，注重教师教学能力和教学水平的提高，
+                对青年教师的培养和骨干教师队伍建设倾心尽力，为学校可持续发展打下了坚实基础。 
+                虞爱梅老师是当年国家教委重点研究项目（中小学能力发展与培养课题组）--
+                分课题（小学生能力发展与培养）成员。1978年被评为水电部优秀教师。
+              </p>
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <!-- 模态框2 -->
+      <div class="modal fade" id="xiao2">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：冯 峰
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/x2.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="冯 峰">
+              <p class="chinese-text">
+                冯 峰，女，汉族，出生于1947年1月，籍贯北京，中共党员，中师毕业，小学高级教师。
+              </p>
+              <p class="chinese-text">
+                北京“老三届”毕业生（1966年高中毕业）； 1975年以黑龙江建设兵团教师身份调入本校任小学数学老师。
+                后历任教务主任、副校长。“条理清晰，京腔京韵”的教学风格，深得了同行好评和学生赞誉。
+                多次担任公开课（示范课）教学，屡次获奖。 
+              </p>
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 模态框3 -->
+      <div class="modal fade" id="xiao3">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：邹淑华
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/x3.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="冯 峰">
+              <p class="chinese-text">
+                邹淑华，女，汉族，出生于1959年2月，四川南充人，中共党员，1974年毕业于安康师范学校，小学高级教师。
+              </p>
+              <p class="chinese-text">
+                1980年6月，调入本校任英语教师。自1982年9月起，至退休，一直承担着语文教学及班主任工作。
+                所带班级在全市统考中成绩始终名列前茅，班级多次评为先进班集体和文明班；
+                个人多次获得子弟一校和水电三局颁发的“优秀教师”、“优秀辅导员”、“优秀班主任”、
+                “优秀党员”等称号；1992年被评为“全国水利系统优秀教师”。
+              </p>
+              <p class="chinese-text">
+                “爱生如子，带班如牛”是她整个教育生涯的真实写照。
+              </p>
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 模态框4 -->
+      <div class="modal fade" id="xiao4">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：王金秀
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/x4.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="虞爱梅">
+              <p class="chinese-text">
+                王金秀，女，汉族，出生于1954年2月， 陕西石泉人，中共党员，初中学历，小学高级教师。
+              </p>
+              <p class="chinese-text">
+                1975年调入本校任教，任教期间任年级组长、教研组长、学科带头人；兼任学校党、团工作。
+                多次获局、处、校优秀教师、先进工作者、优秀党员称号。
+                1993年9月荣获安康地区（市）优秀教师称号。
+              </p>
+              <p class="chinese-text">
+                任教期间，以“苦教苦学”闻名，待人真诚朴实，待生严爱有加，待教精益求精，
+                深得同行、学生、社会好评。
+              </p>
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      
+      
+
+      <!-- 模态框11 -->
+      <div class="modal fade" id="xiao11">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：程铁群
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/x11.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="程铁群">
+              <p class="chinese-text">
+                程铁群 ，男，汉族，出生于1953年11月，籍贯陕西安康，中师学历，小学高级教师。
+              </p>
+              <p class="chinese-text">
+                1981年6月调入水电三局子弟一校从事小学美术教学。任教期间，主要担任小学高年级的美术教学、
+                美术组教研组长、课外美术小组的辅导工作，以及配合学校、教育处完成各类宣传工作。
+                所辅导的学生作品多次入选县、区、市、省组织的美术作品展。 作为省市美协会员，
+                积极投入美术创作，多次参展，入选，获奖，发表美术作品。学校的校徽就是程老师的作品。
+                2003年被评为水电三局优秀教师。
+              </p>
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>            
+    </div>
+
+    <div class="card-footer">
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:school' %}">返回滨江学校专题页 </a>
+        <a href="{% url 'zlapp:index' %}">返回首页</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <p></p>
+
+
+{% endblock main1 %}  
+
+{% block main4 %}
+
+  <div class="card">
+    <div class="card-header"> 
+      <h5 class="text-center">滨江学校影响力教师（中学28人）</h5>
+      <p class="text-center">点击姓名可显示更详细内容</p>      
+    </div>
+
+
+    <div class="card-body">      
+      <div class="row justify-content-around bg-light ">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z1">
+          <h5 >汤德如</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z2">
+          <h5 >刘淑范</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z3">
+          <h5 >王云龙</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z4">
+          <h5 >南隧道</h5>
+        </button>        
+      </div>
+      <p></p>
+      <div class="row justify-content-around bg-light ">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z5">
+          <h5 >杨世云</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z6">
+          <h5 >赵建华</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z7">
+          <h5 >杨存芳</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z8">
+          <h5 >傅锦明</h5>
+        </button>        
+      </div>
+      <p></p>
+      <div class="row justify-content-around bg-light ">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z9">
+          <h5 >郝庆军</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z10">
+          <h5 >金杏娣</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z11">
+          <h5 >钟家丽</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z12">
+          <h5 >刘&emsp;沛</h5>
+        </button>
+      </div>
+      
+      
+      <p></p>
+      <div class="row justify-content-around bg-light ">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z21">
+          <h5 >田景明</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z22">
+          <h5 >沈力齐</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z23">
+          <h5 >朱逸麟</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z24">
+          <h5 >叶祥瑞</h5>
+        </button>
+      </div>
+      <p></p>
+      <div class="row justify-content-around bg-light ">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z25">
+          <h5 >王岚玮</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z26">
+          <h5 >王林虎</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z27">
+          <h5 >胡茂芬</h5>
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#z28">
+          <h5 >孙教人</h5>
+        </button>
+      </div>
+
+
+
+      <!-- 模态框z1 -->
+      <div class="modal fade" id="z1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：汤德如
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/z1.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="汤德如">
+              <p class="chinese-text">
+                汤德如 ，女，汉族 ，出生于1926年2月，1948年复旦大学毕业。
+                中共党员，籍贯安徽歙县，中学高级教师，1948--1958 年在上海从事教育工作；
+                1958--1970年甘肃刘家峡水电四局子校任教；1970--1978年陕西石泉水电四局石泉分局子校任教；
+                1978--1990年陕西安康水电三局子校任教兼教务处主任。
+              </p>
+              <p class="chinese-text">
+                三局子校元老、创始人之一，教育了一代三局子弟，培养了一批子校名师。
+                水电三局第一代职工子弟，对她怀有母亲般的情愫！
+              </p>
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <!-- 模态框2 -->
+      <div class="modal fade" id="z2">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：刘淑范
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/z2.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="刘淑范">
+              <p class="chinese-text">
+                刘淑范，女，汉族，出生于1932年，籍贯河北沧州，中学高级教师。离休教师（干部）。
+              </p>
+              <p class="chinese-text">
+                1946年—1949年河北省沧县省中师范部毕业；1950—1953年河北省涿县省立师范毕业；
+                1956--1960年天津师大数学力学系毕业；1950年元月---1956年8月，
+                在石家庄职工业余学校任教，从事初中语文、历史、代数、几何教学；
+                1960年10月—1961年6月在天津五十四中学任数学教师；
+                1961—1966年在水电四局子弟小学代2-6年级语文课；
+                1973—1987年在三局子弟中学高中从事数学教学直到离休。
+              </p>
+              <p class="chinese-text">
+                三局子校创校元老，离休“老革命”，一生矢志于教书育人，硕果累累，
+                她的很多学生后来都成为社会的栋梁，她以此为荣，学生以她为傲。
+              </p>
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 模态框z3 -->
+      <div class="modal fade" id="z3">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：王云龙
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/z3.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="王云龙">
+              <p class="chinese-text">
+                王云龙，男，汉族，出生于1936年10月，籍贯，江苏沛县，大专学历，中学一级教师，曾任三局子弟中学副校长。
+              </p>
+              <p class="chinese-text">
+                1975年6月调入本校任高中数学老师。 常年担任毕业班的数学课，
+                恢复高考后第一届的升学率约为10%左右（当年全国录取率是4.8%）。
+                担任副校长后，主抓毕业班教学，高考的升学率不断在提高，
+                每年都有多名学生考取重点大学。
+                80年代中期，三局中学高考成绩一直名列安康地区前茅。王老师做出了巨大贡献。
+
+              </p>            
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 模态框z4 -->
+      <div class="modal fade" id="z4">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：南隧道
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/z4.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="南隧道">
+              <p class="chinese-text">
+                南隧道，男，汉族，出生于1938年6月 ，籍贯陕西长安县，1961年毕业于陕西师范大学中文系，中学高级教师。
+              </p>
+              <p class="chinese-text">
+                1984年9月调入本校，任高中语文老师。常年担任语文教研组长及高三毕业班教学，
+                精深和渊博的文学知识和教育理论知识，使他的语文课“行云流水”，“如沐春风”。
+                一堂课下来，重点难点“历历在目”。所教语文学科取得了优异的成绩，
+                连续多年被评为校，区，市级优秀教师。1991年10月被评为陕西省优秀教师。
+              </p>
+              <p class="chinese-text">
+                他是一位深受同行尊敬，学生佩服，家长欢迎的老师。
+              </p>
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      
+      <!-- 模态框z11 -->
+      <div class="modal fade" id="z11">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+              <h5 class="modal-title " >
+                滨江学校影响力教师：钟家丽
+              </h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+              <img src="{% static 'images/zlapp/4school/z11.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:200px;"  alt="钟家丽">
+              <p class="chinese-text">
+                钟家丽，女，汉族，出生于1947年3月，籍贯山东济宁。1980年7月毕业于咸阳师专，大专学历，中学高级教师。
+              </p>
+              <p class="chinese-text">
+                1977年4月调入水电三局子弟中学任教，长期从事高中化学教学。 
+                “老三届”和恢复高考后的首届毕业生的“身份”，体现在教学中，就是认真，严谨，
+                负责，诲人不倦。
+
+              </p>
+
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <div class="row justify-content-around bg-light ">
+                
+                
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:new_entry'  topic.id   %}">网友留言 </a>
+                </button>
+                <button type="button" class="btn " >
+                  <a href="{% url 'zlapp:topic' topic.id %}">查看留言</a>
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div> 
+
+           
+    </div>
+
+
+
+
+    <div class="card-footer">
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:school' %}">返回滨江学校专题页 </a>
+        <a href="{% url 'zlapp:index' %}">返回首页</a>
+      </div>
+    </div>    
+
+  </div>
+  
+
+
+
+
+
+
+
+{% endblock main4 %}

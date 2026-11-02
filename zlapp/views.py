@@ -172,6 +172,26 @@ def school24(request):
 
     return render(request, 'zlapp/school24.html', context)
 
+def school31(request):
+    """学校专题31：滨江学校影响力教师"""
+    topic = Topic.objects.get(id=3)
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news, 'topic':topic}
+
+    return render(request, 'zlapp/school31.html', context)
+
+def school41(request):
+    """学校专题41：滨江学校励志校友"""
+    topic = Topic.objects.get(id=3)
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news, 'topic':topic}
+
+    return render(request, 'zlapp/school41.html', context)
+
+
+
+
+
 
 @login_required
 def respect1(request):
