@@ -1,0 +1,237 @@
+{% extends "zlapp/base5.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="text-center">滨江学校</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school11' %}">滨江学校历史</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school21' %}">滨江学校大事记</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school31' %}">滨江学校影响力教师</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school41' %}">滨江学校励志校友</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school51' %}">滨江学校历史图集</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#shuoming">水电三局教育处</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:index' %}">返回首页</a>
+        </li>
+       
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+{% endblock cemian2 %}
+
+{% block main1 %}
+  <div class="card">
+    <div class="card-header">
+      <h5 class="text-center">滨江学校（原三局子校）高中部</h5>      
+    </div>
+
+    <div class="card-body">
+      <p class="chinese-text">
+        1978年5月滨江学校（原三局子校）建校伊始，就是以1978届高中毕业生，
+        在安康张岭新建的教学楼里复习备考，然后在安康汉滨区参加高考（1978年7月）开始的。
+
+      </p>   
+      
+      <p id="lz0"></p>
+      <p class="chinese-text">
+        此后每年的高考三天，成了水电三局张岭生活区压倒一切的年度大事。
+        工程局各单位无偿调拨的大型轿车，从中学门口一直排到局机关门口，
+        车队浩浩荡荡开进安康城区各个考点。    
+      
+      </p>
+      <p class="chinese-text">
+        1984年高考，三局中学虽然只有12人考入大学，却在安康地区位居前列，
+        1985年19人考入大学，位居安康中学、永红中学（现汉滨高中）、旬阳中学之后，名列第四。
+      </p>      
+      
+      <p class="chinese-text">
+        据不完全统计，从建校的1978年起，到2021年7月止，由子弟学校考入本科院校的学子有700余人。
+        更有姣姣者考入清华北大等著名学府，如1984年吴剑英考入清华大学，孙德元考入上海同济大学，
+        1985年张文华考入上海同济大学，1987年张靖考入北京大学，1988年张刚考入复旦大学，
+        1989年于鹏考入武汉大学，1990年吴天侠考入武汉大学，1993年任勇考入上海交通大学，
+        2000年周睿考入清华大学，等等。
+      </p>
+      <p class="chinese-text">
+        2019年9月由于师资不足、生源不足，滨江学校（原三局子校）高中部停止招生，
+        2021年7月滨江学校高中部停办。        
+      </p>      
+      
+      <p class="chinese-text">
+        滨江学校高中部虽然只创办了  年，但她所创造的辉煌成绩，却成为滨江学校永远的精神财富。
+
+      </p>
+      <p class="chinese-text">
+        1978年9月滨江学校（原三局子校）初建时，是所小学、初中、高中九年一贯制学校，
+        学校名称为“水电十五局子弟一校”。
+      </p>
+      <p class="chinese-text">
+        1979年9月水电十五局子弟一校分设为水电十五局子弟一校（小学）和水电十五局职工子弟中学。
+        水电十五局子弟一校成为一所完全小学，担负工程局职工子女小学五年的教育教学工作，
+        1989年9月学制改成六年；水电十五局职工子弟中学则担负职工子女初中（2年）、
+        高中（2年）的教育教学工作，1980年学制改革后，初中改为三年学制，1983年学制改革，
+        高中也改为三年学制。
+      </p>
+      <p class="chinese-text">
+        1982年9月两局合并后，学校随工程局更名为为水电电力部三局子弟一校、三局子弟中学。
+      </p>
+      <p class="chinese-text">
+        1987高考，在安康地区十三所省地重点中学中，三局中学高考平均成绩名列第一。
+        张靖（男）同学被北京大学力学系录取。
+      </p>
+      <p class="chinese-text">
+        1991年高考，三局中学63名学生考入大中专，成绩名列安康汉滨区第一，安康地区13所重点中学第三。
+        
+      </p>
+      <p class="chinese-text">
+        2000年9月，周睿（男）同学被清华大学工程力学系录取。
+
+      </p>
+      <p class="chinese-text">
+        2001年9月，三局中学被安康地区授予“高中教育工作先进学校”。
+
+      </p>
+      <p class="chinese-text">
+        2002年9月，张璇（男）同学被清华大学计算机系录取。
+
+      </p>
+      <p class="chinese-text">
+        2003年6月，安康市教育局对三局中学工作进行全面检查。
+        当年市教育工作会议确认学校为“安康市重点中学”。
+
+      </p>
+      <p class="chinese-text">
+        2004年8月，水电三局子弟中学分为三局初级中学和三局高级中学两所学校。
+      </p>
+      <p class="chinese-text">
+        2005年3月，水电三局按《国务院办公厅关于第二批中央企业分离办社会职能工作有关问题的通知》
+        （国办发[2005]4号）文件要求，启动所属学校移交地方的工作。
+      </p>
+      <p class="chinese-text">
+        2005年9月，水电三局教育处机关、三局子弟一校、三局初级中学、
+        三局高级中学合并为三局职工子弟学校；徐德胜任校长，王广培任党委书记。
+      </p>
+      <p class="chinese-text">
+        2006年12月水电三局和安康市汉滨区政府签订协议，完成三局子弟学校整建制移交汉滨区工作，
+        三局职工子弟学校更名为“汉滨区滨江学校”，纳入地方教育序列。移交汉滨区后，
+        按照学区划分，滨江学校的服务范围北达工业园区，东至寇家沟，西临安康大道，
+        服务人口约5万人。学校普通高中招生则纳入安康市的高中招生计划中。
+      </p>
+      <p class="chinese-text">
+        2015年11月，安康市副市长孙矿玲到滨江学校调研江北教育资源整合工作。
+
+      </p>
+      <p class="chinese-text">
+        2016年11月，郭斌副校长主持的滨江学校基本建设规划通过安康市规划评审。
+
+      </p>
+      <p class="chinese-text">
+        2017年2月安康市市长徐启方到学校检查指导学校整体规划工作。
+      </p>
+      <p class="chinese-text">
+        2017年7月，学校原来的教学楼（飞机楼等）陆续拆除，滨江学校初中综合楼开工建设。
+      </p>
+      <p class="chinese-text">
+        2017年8月，郑杰同志任滨江学校校长；陈小红同志任滨江学校党总支书记。
+      </p>
+      <p class="chinese-text">
+        2018年6月，经过一年的建设，滨江学校初中综合楼竣工验收；9月1日投入使用。
+      </p>
+      <p class="chinese-text">
+        2019年5月，滨江学校小学综合楼开工建设。
+      </p>
+      <p class="chinese-text">
+        2019年8月，面对学校高中部师资不足、学生不足的严峻形势，滨江学校决定高一年级停止招生。
+
+      </p>
+
+      <p class="chinese-text">
+        2020年8月23日，在安康市汉滨区政府主导下，汉滨区滨江学校加入汉滨初中教育集团，
+        学校更名为“汉滨初中滨江校区”。
+      </p>
+      <p class="chinese-text">
+        2021年7月汉滨初中滨江校区（原滨江学校）最后一届高中生毕业离校。
+      </p>
+      <p class="chinese-text">
+        汉滨初中滨江校区（原滨江学校、三局子校）高中从1978年5月1978届高中生备战高考开始，
+        到2021年7月最后一届高中毕业生高考为止，共培养？？届，5000余名高中毕业生，考入各类高等院校约2000人。
+      </p>
+      <p class="chinese-text">
+        
+
+      </p>
+
+
+
+
+      
+         
+    </div>
+
+    <div class="card-footer">
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:school' %}">返回滨江学校专题页 </a>
+        <a href="{% url 'zlapp:index' %}">返回首页</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <p></p>
+
+
+{% endblock main1 %}  
+
+{% block main4 %}
+
+  <div class="card">
+    <div class="card-header"> 
+      <h5 class="text-center">滨江学校（原三局子校）高考录取名单</h5>
+      <p class="text-center">1978年--2021年</p>
+    </div>    
+
+  </div> 
+
+
+
+
+
+
+
+{% endblock main4 %}

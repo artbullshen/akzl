@@ -188,6 +188,30 @@ def school41(request):
 
     return render(request, 'zlapp/school41.html', context)
 
+def school51(request):
+    """学校专题51：滨江学校历史图集"""
+    topic = Topic.objects.get(id=3)
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news, 'topic':topic}
+
+    return render(request, 'zlapp/school51.html', context)
+
+def school61(request):
+    """学校专题61：水电三局教育处"""
+    topic = Topic.objects.get(id=3)
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news, 'topic':topic}
+
+    return render(request, 'zlapp/school61.html', context) 
+
+def school62(request):
+    """学校专题62：滨江学校（原三局子校）高中部"""
+    topic = Topic.objects.get(id=3)
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news, 'topic':topic}
+
+    return render(request, 'zlapp/school62.html', context)    
+
 
 
 

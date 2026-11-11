@@ -1,0 +1,198 @@
+{% extends "zlapp/base5.html" %}
+
+{% load static %}
+
+
+{% block cemian1 %}
+  <h5 class="text-center">滨江学校</h5>
+      <hr class="d-sm-none">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school11' %}">滨江学校历史</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school21' %}">滨江学校大事记</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school31' %}">滨江学校影响力教师</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:school41' %}">滨江学校励志校友</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:school51' %}">滨江学校历史图集</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#shuoming">水电三局教育处</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'zlapp:index' %}">返回首页</a>
+        </li>
+       
+      </ul>
+
+
+      <hr class="d-sm-none">
+
+      
+
+
+
+{% endblock cemian1 %}
+
+<p></p>
+
+{% block cemian2 %}
+  <div class="card-header">
+      <h5 class="chinese-text">张岭最新动态</h5>
+  </div>
+  <div class="card-body">
+
+      <p> 测试内容</p>
+  </div>
+  <div class="card-footer">
+    <a href="{% url 'zlapp:news' %}">更多消息</a>
+  </div>
+{% endblock cemian2 %}
+
+{% block main1 %}
+  <div class="card">
+    <div class="card-header">
+      <h5 class="text-center">滨江学校历史图集</h5>      
+    </div>
+
+    <div class="card-body">
+      <p class="chinese-text">
+        滨江学校（原三局子校）历史图集，是根据滨江学校
+      </p>      
+      
+         
+    </div>
+
+    <div class="card-footer">
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:school' %}">返回滨江学校专题页 </a>
+        <a href="{% url 'zlapp:index' %}">返回首页</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <p></p>
+
+
+{% endblock main1 %}  
+
+{% block main4 %}
+
+  <div class="card">
+    <div class="card-header"> 
+      <h5 class="text-center">一、黑白照片</h5>
+    </div>
+
+
+    <div class="card-body">
+      <p class="text-center">
+        <img src="{% static 'images/zlapp/4school/lstj/lstj1.webp' %}" class="img-fluid" style="margin-right:15px; width:450px;"  alt="lstj1">
+        <img src="{% static 'images/zlapp/4school/lstj/lstj2.webp' %}" class="img-fluid" style="margin-right:15px; width:450px;"  alt="lstj2">
+        <img src="{% static 'images/zlapp/4school/lstj/lstj3.webp' %}" class="img-fluid" style=" margin-right:15px; width:450px;"  alt="lstj3">
+        <img src="{% static 'images/zlapp/4school/lstj/lstj4.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj4">
+        <img src="{% static 'images/zlapp/4school/lstj/lstj5.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj5">
+      
+      </p>
+           
+    </div>
+
+    <div class="card-footer">
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:school' %}">返回滨江学校专题页 </a>
+        <a href="{% url 'zlapp:index' %}">返回首页</a>
+      </div>
+    </div>    
+
+  </div>
+
+  <div class="card">
+    <div class="card-header"> 
+      <h5 class="text-center">二、彩色年华</h5>
+    </div>
+
+
+    <div class="card-body">
+      <div class="text-center">
+      <img src="{% static 'images/zlapp/4school/lstj/lstj6.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj1">
+      </div>
+      <img src="{% static 'images/zlapp/4school/lstj/lstj7.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj2">
+      <img src="{% static 'images/zlapp/4school/lstj/lstj8.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj3">
+      <p class="text-center"></p>
+           
+    </div>
+
+    <div class="card-footer">
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:school' %}">返回滨江学校专题页 </a>
+        <a href="{% url 'zlapp:index' %}">返回首页</a>
+      </div>
+    </div>    
+
+  </div>
+
+  <div class="card">
+    <div class="card-header"> 
+      <h5 class="text-center">三、新时代 新活力</h5>
+    </div>
+
+
+    <div class="card-body">
+      <div class="text-center">
+      <img src="{% static 'images/zlapp/4school/lstj/lstj10.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj1">
+      </div>
+      <img src="{% static 'images/zlapp/4school/lstj/lstj12.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj2">
+      <img src="{% static 'images/zlapp/4school/lstj/lstj13.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj3">
+      <p class="text-center"></p>
+           
+    </div>
+
+    <div class="card-footer">
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:school' %}">返回滨江学校专题页 </a>
+        <a href="{% url 'zlapp:index' %}">返回首页</a>
+      </div>
+    </div>    
+
+  </div>
+
+  <div class="card">
+    <div class="card-header"> 
+      <h5 class="text-center">四、梦想与未来</h5>
+    </div>
+
+
+    <div class="card-body">
+      <div class="text-center">
+      <img src="{% static 'images/zlapp/4school/lstj/lstj17.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj1">
+      </div>
+      <img src="{% static 'images/zlapp/4school/lstj/lstj18.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj2">
+      <img src="{% static 'images/zlapp/4school/lstj/lstj19.webp' %}" class="img-fluid" style="float:left; margin-right:15px; width:450px;"  alt="lstj3">
+      <p class="text-center"></p>
+           
+    </div>
+
+    <div class="card-footer">
+      <div class="row justify-content-around bg-light ">
+        <a href="{% url 'zlapp:school' %}">返回滨江学校专题页 </a>
+        <a href="{% url 'zlapp:index' %}">返回首页</a>
+      </div>
+    </div>    
+
+  </div>
+  
+
+
+
+
+
+
+
+{% endblock main4 %}
