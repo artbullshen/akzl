@@ -94,7 +94,7 @@ def sd3j4(request):
 def school(request):
     """学校专题"""
     topic = Topic.objects.get(id=3)
-    news = News.objects.order_by('-date_added').all()[:10]
+    news = News.objects.order_by('-date_added').all()[:3]
     context = {'news':news, 'topic':topic}
 
     return render(request, 'zlapp/school.html', context)
