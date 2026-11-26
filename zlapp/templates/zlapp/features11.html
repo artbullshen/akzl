@@ -8,14 +8,20 @@
       <hr class="d-sm-none">
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link " href="#">编辑寄语</a>
+          <a class="nav-link " href="{% url 'zlapp:features' %}">安康，安宁康泰！</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">建设中</a>
+          <a class="nav-link active" href="{% url 'zlapp:features11' %}">张岭美食</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">建设中</a>
-        </li>       
+          <a class="nav-link" href="{% url 'zlapp:features12' %}">安康美食</a>          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:features13' %}">安康特产</a>          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:features14' %}">安康旅游</a>          
+        </li>                     
         
         <li class="nav-item">
           <a class="nav-link " href="{% url 'zlapp:index' %}">返回首页</a>
@@ -69,13 +75,14 @@
 
 <div class="container">
   <div id="zl1">
-    <h5 class="text-center">三餐四季：编辑寄语</h5>
+    <h5 class="text-center">三餐四季：张岭美食</h5>
   </div>
   
   <div class="card">
     <div class="card-header">
-      <h5 class="chinese-text">安康位于陕西南部。
-        高铁通车，西安到安康一小时，是理想的休闲、旅游宝地。</h5>
+      <h5 class="chinese-text">
+        张岭的烟火气，是每天早上从菜市场上升起的。
+      </h5>
     </div>
     <div class="card-body">
       <p class="chinese-text">

@@ -59,6 +59,11 @@ urlpatterns = [
 
     # 三餐四季部分
     path('features/', views.features, name='features'),
+    path('features11/', views.features11, name='features11'),
+    path('features12/', views.features12, name='features12'),
+    path('features13/', views.features13, name='features13'),
+    path('features14/', views.features14, name='features14'),
+
 
     # 天南地北部分
     path('bond/', views.bond, name='bond'),  

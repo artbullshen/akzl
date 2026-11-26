@@ -8,14 +8,20 @@
       <hr class="d-sm-none">
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link " href="#">编辑寄语</a>
+          <a class="nav-link " href="{% url 'zlapp:features' %}">安康，安宁康泰！</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">建设中</a>
+          <a class="nav-link" href="{% url 'zlapp:features11' %}">张岭美食</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">建设中</a>
-        </li>       
+          <a class="nav-link active" href="{% url 'zlapp:features12' %}">安康美食</a>          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:features13' %}">安康特产</a>          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'zlapp:features14' %}">安康旅游</a>          
+        </li>                     
         
         <li class="nav-item">
           <a class="nav-link " href="{% url 'zlapp:index' %}">返回首页</a>
@@ -69,27 +75,85 @@
 
 <div class="container">
   <div id="zl1">
-    <h5 class="text-center">三餐四季：编辑寄语</h5>
+    <h5 class="text-center">三餐四季：安康美食</h5>
   </div>
   
   <div class="card">
     <div class="card-header">
-      <h5 class="chinese-text">安康位于陕西南部。
-        高铁通车，西安到安康一小时，是理想的休闲、旅游宝地。</h5>
+      <h5 class="chinese-text">
+        安康，有着丰富多样的特色菜肴和小吃，这些特色菜肴和丰富的小吃，反映了安康地区丰富的饮食文化和地方特色。
+        如果您有机会访问安康，不妨来品尝一下这些地道的美食。
+      </h5>
     </div>
     <div class="card-body">
       <p class="chinese-text">
-        安康位于陕西南部，降水丰富，气候宜人，四季分明，是陕西南部的旅游胜地。
-        安康的气候条件非常适合旅游，无论是夏季的避暑，还是冬季的滑雪，都能找到适合自己的活动。
-        安康的自然风光也非常美丽，有山有水，有森林有草原，有古迹有现代建筑，是一个集自然风光、人文景观、旅游活动于一体的旅游胜地。
-                
+        安康有着丰富多样的特色菜肴和小吃，酸辣是其主要特色，其它味道兼顾。
+      </p>
+      <p class="chinese-text">
+        蒸面：作为陕南最具辨识度的小吃之一，其制作工艺已被列入省级非遗名录。选用优质小麦粉调浆，
+        经蒸制后切成细条，佐以豆芽、黄瓜丝，浇上秘制酱汁，口感筋道爽滑。
+      </p>
+      <p class="chinese-text">
+        紫阳蒸盆子：宴席上的压轴大菜，集土鸡、猪蹄、蛋饺、香菇于一体，慢火蒸制六小时以上，
+        汤色清亮，滋味浓郁。这道菜起源于清代，原为祭祀供品，现已成为紫阳县标志性宴客菜肴。
+      </p>
+      <p class="chinese-text">
+        岚皋魔芋烧鸭：凭借低脂高纤维的特点广受青睐，魔芋来自海拔800米以上的高山种植区，
+        搭配散养麻鸭炖煮，口感滑嫩而不腻。
+      </p>
+      <p class="chinese-text">
+        岚皋苦荞饼：岚皋县的特色小吃，以苦荞为主要原料，口感酥脆，味道香甜。 
+      </p>
+      <p class="chinese-text">
+        石泉鼓气泡：这是一种发酵面食，形似小馒头，内部充满气体，趁热撕开涂抹辣酱或夹入卤蛋、
+        腊肉片，香气扑鼻。
+      </p>
+      <p class="chinese-text">
+        石泉鬼谷子腊肉：石泉县的特色美食，以猪肉为主要原料，口感香醇，味道浓郁。
+      </p>
+      <p class="chinese-text">
+        安康稠酒（米酒）：以优质大米为原料，经过长时间的发酵，口感醇厚，带有淡淡的酒香，是当地人日常饮酒的主要方式。
+        注意：这种酒不能多喝，到时候喝醉了别说我没告诉你哦！！！
+      </p>
+      <p class="chinese-text">
+        汉阴炸油果子：采用红薯淀粉与面粉混合揉团，油炸至金黄酥脆，外皮微焦内里软糯，常作为早餐或茶点食用。
+      </p>
+      <p class="chinese-text">
+        镇坪腊肉：保留着传统的制作工艺，制作而成的腊肉香味浓郁，味道醇厚，肉质紧实，鲜美独特，深受各地人的喜爱。
+      </p>
+      <p class="chinese-text">
+        安康酸辣蕨粉皮：以蕨粉为主要原料，口感软滑，味道酸辣。 
+      </p>
+      <p class="chinese-text">
+        汉阴炕炕馍：汉阴县的传统美食，有咸有甜，有长有圆，风味独特，入选“中国地域十大名小吃”。 
+      </p>
+      <p class="chinese-text">
+        旬阳八大件：旬阳八大件指的是蜀河八大件，全套宴席共八凉八热、八荤八素，外加六个座碗和一个汤，
+        总计23道菜肴。‌它源于陕西旬阳蜀河古镇，2011年被列入陕西省非物质文化遗产名录。
+      </p>
+      <p class="chinese-text">
+        白河肉糕：白河县的传统美食，以猪肉、鸡蛋、淀粉为主料，成品上黄下白，口感肥而不腻且劲道十足。
+        其制作需将肥瘦猪肉用木槌捣成泥，加入淀粉、蛋清调和后蒸制，每蒸五分钟涂抹一次蛋黄，共三次定型。
+        食用时多以肉糕汤形式呈现，肉丸垫底、肉糕切片覆盖，配以胡萝卜、香菇、青菜及鸡汤组合成菜。
+      </p>
+      <p class="chinese-text">
+        平利绞股蓝茶香饺：平利县的特色美食，以绞股蓝和面粉为主要原料，口感软滑，味道香醇。
+      </p>
+      <p class="chinese-text">
+        宁陕浆粑馍：宁陕县的传统美食，以玉米、面粉为主要原料，口感酥脆，味道香甜。
+      </p>
+      <p class="chinese-text">
+        此外，安康还有许多其他特色美食，如神仙豆腐、白火汆汤、富硒土鸡、牛肝菌滑多宝鱼等，
+        以及各种小吃如安康烧饼等。
+      </p>
+      <p class="chinese-text">
+        这些小吃各具特色，反映了安康地区丰富的饮食文化和地方特色。
+        如果您有机会访问安康，不妨尝试这些地道的美食。
       </p>      
  
       
       <p class="chinese-text">
-        由于本网站初创，希望更多的人为本网站的建设和发展献计献策，
-        让《岭上岁月》网站成为我们共同的精神家园！
-        
+                
       </p>     
 
 

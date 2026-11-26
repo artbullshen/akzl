@@ -294,10 +294,41 @@ def other(request):
 
 def features(request):
     """三餐四季"""
-    news = News.objects.order_by('-date_added')
+    news = News.objects.order_by('-date_added').all()[:10]
     context = {'news':news}
 
     return render(request, 'zlapp/features.html', context)
+
+def features11(request):
+    """三餐四季栏目一：安康"""
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news}
+
+    return render(request, 'zlapp/features11.html', context)
+
+def features12(request):
+    """三餐四季栏目二：张岭美食"""
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news}
+
+    return render(request, 'zlapp/features12.html', context)
+
+def features13(request):
+    """三餐四季"""
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news}
+
+    return render(request, 'zlapp/features13.html', context)
+
+def features14(request):
+    """三餐四季"""
+    news = News.objects.order_by('-date_added').all()[:10]
+    context = {'news':news}
+
+    return render(request, 'zlapp/features14.html', context)
+
+
+
 
 
 def bond(request):
